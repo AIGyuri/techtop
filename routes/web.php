@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OrderItemController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
@@ -35,5 +36,7 @@ Route::get('/products', [ProductController::class, 'index'])->name('products');
 Route::get('/users', [UserController::class, 'index'])->name('users');
 
 Route::get('/orders', [OrderController::class, 'index'])->name('orders');
+
+Route::get('/orders-items', [OrderItemController::class, 'index'])->name('orders-items');
 
 require __DIR__.'/auth.php';

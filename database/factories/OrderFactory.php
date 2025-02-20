@@ -17,7 +17,7 @@ class OrderFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => fake()->numberBetween(1, 10),
+            'user_id' => fake()->numberBetween(1, 1),
             'total_amount' => fake()->numberBetween(0, 50),
             'status' => fake()->randomElement(["raktárban", "kiszállítás alatt", "átvéve" , "sikertelen"]),
             'created_at' => now(),

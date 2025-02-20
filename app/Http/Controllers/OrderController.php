@@ -12,7 +12,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return Order::all();
+        return Order::with(['order_items.product', 'user' ])->get();
     }
 
     /**
