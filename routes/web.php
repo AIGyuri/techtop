@@ -39,4 +39,8 @@ Route::get('/orders', [OrderController::class, 'index'])->name('orders');
 
 Route::get('/orders-items', [OrderItemController::class, 'index'])->name('orders-items');
 
+Route::get('/productslist', function () {
+    return Inertia::render('ProductListing');
+})->middleware(['auth', 'verified'])->name('productslist');
+
 require __DIR__.'/auth.php';
