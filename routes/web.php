@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
 
 Route::get('/products', [ProductController::class, 'index'])->name('products');
+Route::get('/products/{id}', [ProductController::class, 'show'])->name('product');
 
 Route::get('/users', [UserController::class, 'index'])->name('users');
 
@@ -43,4 +44,4 @@ Route::get('/productslist', function () {
     return Inertia::render('ProductListing');
 })->middleware(['auth', 'verified'])->name('productslist');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

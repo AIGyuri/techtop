@@ -1,9 +1,13 @@
 //import { useState } from 'react';
+import NavLink from '@/Components/NavLink';
+import { Description } from '@headlessui/react';
+import { Link } from '@inertiajs/react';
 import React, { useEffect, useState } from 'react';
 
 interface ProductCardProps {
   product:
   {
+    id: number;
     name: string;
     description: string;
     price: number;
@@ -15,8 +19,10 @@ interface ProductCardProps {
 }
 
 
+
 const ProductCard = ({
   product: {
+    id,
     name,
     description,
     price,
@@ -55,8 +61,9 @@ const ProductCard = ({
           <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800">
             {name}
           </span>
-          <p>{description}</p>
 
+
+          {/* Ez itt a csillag */}
           <div className="flex items-center justify-end gap-1">
             {/* Quick look és favorite gombok */}
           </div>
@@ -67,12 +74,14 @@ const ProductCard = ({
         <div className="mt-2 flex items-center gap-2">
           <div className="flex items-center">{renderStars()}</div>
         </div>
+        {/* Ez itt a csillag */}
+
 
         <div className="mt-4 flex items-center justify-between gap-4">
-          <p className="text-2xl font-extrabold leading-tight text-gray-900 ">{price}</p>
-          <button className="inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300">
-            Add to cart
-          </button>
+          <p className="text-2xl font-extrabold leading-tight text-gray-900 ">{price} Ft</p>
+          <Link href={`/products/${id}`} className="inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300">
+            Bővebben
+          </Link>
         </div>
       </div>
     </div>
