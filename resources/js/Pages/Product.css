@@ -1,0 +1,35 @@
+.product-container {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 100%; /* Ne engedjük túl szélesre a kártyát */
+}
+
+.product-image {
+    width: 150px; /* A kép szélességét korlátozzuk */
+    height: 150px; /* A kép magasságát is korlátozzuk */
+    object-fit: cover; /* A kép kitölti a teret, de megtartja az arányait */
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #555;
+    margin: 12px 
+}

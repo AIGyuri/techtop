@@ -51,9 +51,9 @@ const ProductCard = ({
   return (
     <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
       <div className="h-56 w-full">
-        <a href="#">
-          <img className="mx-auto h-full" src={image} alt={name} />
-        </a>
+        <Link href={`/products/${id}`}>
+          <img className="mx-auto h-full" src={image} alt={name} />  
+        </Link>
       </div>
       <div className="pt-6">
         <div className="mb-4 flex items-center justify-between gap-4">
@@ -79,9 +79,10 @@ const ProductCard = ({
 
         <div className="mt-4 flex items-center justify-between gap-4">
           <p className="text-2xl font-extrabold leading-tight text-gray-900 ">{price} Ft</p>
-          <Link href={`/products/${id}`} className="inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300">
-            Bővebben
+          <Link href='#' className="inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300">
+            Kosárba
           </Link>
+          
         </div>
       </div>
     </div>
