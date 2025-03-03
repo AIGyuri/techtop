@@ -51,11 +51,11 @@ export default function UpdatePasswordForm({
     return (
         <section className={className}>
             <header>
-                <h2 className="text-lg font-medium text-gray-900 dark:text-gray-100">
+                <h2 className="text-lg font-medium text-gray-900">
                     Update Password
                 </h2>
 
-                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                <p className="mt-1 text-sm text-gray-600">
                     Ensure your account is using a long, random password to stay
                     secure.
                 </p>
@@ -81,7 +81,7 @@ export default function UpdatePasswordForm({
                     />
 
                     <InputError
-                        message={errors.current_password}
+                        message={errors.current_password ? "A jelenlegi jelszó mező kitöltése kötelező." : ''}
                         className="mt-2"
                     />
                 </div>
@@ -99,7 +99,7 @@ export default function UpdatePasswordForm({
                         autoComplete="new-password"
                     />
 
-                    <InputError message={errors.password} className="mt-2" />
+                    <InputError message={errors.password ? "A jelszó mező kitöltése kötelező." : ''} className="mt-2" />
                 </div>
 
                 <div>
@@ -126,7 +126,7 @@ export default function UpdatePasswordForm({
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <PrimaryButton disabled={processing}>Save</PrimaryButton>
+                    <PrimaryButton disabled={processing} className='bg-green-500 hover:bg-green-300'>mentés</PrimaryButton>
 
                     <Transition
                         show={recentlySuccessful}
@@ -135,8 +135,8 @@ export default function UpdatePasswordForm({
                         leave="transition ease-in-out"
                         leaveTo="opacity-0"
                     >
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                            Saved.
+                        <p className="text-sm text-gray-900">
+                            Elmentve.
                         </p>
                     </Transition>
                 </div>

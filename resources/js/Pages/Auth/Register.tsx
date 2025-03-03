@@ -25,10 +25,11 @@ export default function Register() {
     return (
         <GuestLayout>
             <Head title="Register" />
+            <h2 className='text-center text-3xl font-bold bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-300 bg-clip-text text-transparent'>Regisztráció</h2>
 
             <form onSubmit={submit}>
                 <div>
-                    <InputLabel htmlFor="name" value="Name" />
+                    <InputLabel htmlFor="name" value="Név" />
 
                     <TextInput
                         id="name"
@@ -62,7 +63,7 @@ export default function Register() {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
+                    <InputLabel htmlFor="password" value="Jelszó" />
 
                     <TextInput
                         id="password"
@@ -81,7 +82,7 @@ export default function Register() {
                 <div className="mt-4">
                     <InputLabel
                         htmlFor="password_confirmation"
-                        value="Confirm Password"
+                        value="Jelszó megerősítése"
                     />
 
                     <TextInput
@@ -106,13 +107,13 @@ export default function Register() {
                 <div className="mt-4 flex items-center justify-end">
                     <Link
                         href={route('login')}
-                        className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:text-gray-400 dark:hover:text-gray-100 dark:focus:ring-offset-gray-800"
+                        className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     >
-                        Already registered?
+                        Regisztráltál már?
                     </Link>
 
-                    <PrimaryButton className="ms-4" disabled={processing}>
-                        Register
+                    <PrimaryButton className="ms-4 bg-blue-500 hover:bg-blue-300" disabled={processing}>
+                        Regisztráció
                     </PrimaryButton>
                 </div>
             </form>

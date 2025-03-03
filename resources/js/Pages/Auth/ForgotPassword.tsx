@@ -18,16 +18,23 @@ export default function ForgotPassword({ status }: { status?: string }) {
 
     return (
         <GuestLayout>
-            <Head title="Forgot Password" />
+            <Head title="Elfelejtett jelszó" />
 
-            <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
-                Forgot your password? No problem. Just let us know your email
+            <div className="mb-4 text-sm text-gray-700 font">
+                <h2 className='text-center text-2xl font-bold bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-300 bg-clip-text text-transparent'>Elfelejtett jelszó</h2>
+            {/* <div className="mb-4 text-sm text-gray-700"> */}
+                {/* Forgot your password? No problem. Just let us know your email
                 address and we will email you a password reset link that will
-                allow you to choose a new one.
+                allow you to choose a new one. */}
+               {/* Elfelejtette a jelszót? Csak add meg azt az e-mail címet, amellyel regisztráltál, és mi kiküldünk egy jelszó-visszaállítási linket, amellyel vissza tudod állítani a jelszót. */}
+               <p className='text-center font-medium'>
+               Elfelejtetted a jelszavad? Semmi gond! Írd be az e-mail címed, és küldünk egy visszaállítási linket. Csak kattints rá, és állíts be egy új jelszót!
+               </p>
+               
             </div>
 
             {status && (
-                <div className="mb-4 text-sm font-medium text-green-600 dark:text-green-400">
+                <div className="mb-4 text-sm font-medium text-green-600">
                     {status}
                 </div>
             )}
@@ -45,9 +52,10 @@ export default function ForgotPassword({ status }: { status?: string }) {
 
                 <InputError message={errors.email} className="mt-2" />
 
-                <div className="mt-4 flex items-center justify-end">
-                    <PrimaryButton className="ms-4" disabled={processing}>
-                        Email Password Reset Link
+                <div className="mt-4 flex items-center justify-center">
+                    <PrimaryButton className="ms-0 bg-red-500 hover:bg-red-300" disabled={processing}>
+                        {/* Email Password Reset Link */}
+                        Visszaállítás
                     </PrimaryButton>
                 </div>
             </form>

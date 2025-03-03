@@ -30,7 +30,7 @@ export default function ResetPassword({
 
     return (
         <GuestLayout>
-            <Head title="Reset Password" />
+            <Head title="Jelszó visszaállítása" />
 
             <form onSubmit={submit}>
                 <div>
@@ -50,7 +50,7 @@ export default function ResetPassword({
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
+                    <InputLabel htmlFor="password" value="Jelszó" />
 
                     <TextInput
                         id="password"
@@ -69,7 +69,7 @@ export default function ResetPassword({
                 <div className="mt-4">
                     <InputLabel
                         htmlFor="password_confirmation"
-                        value="Confirm Password"
+                        value="Jelszó megerősítése"
                     />
 
                     <TextInput
@@ -89,9 +89,9 @@ export default function ResetPassword({
                     />
                 </div>
 
-                <div className="mt-4 flex items-center justify-end">
-                    <PrimaryButton className="ms-4" disabled={processing}>
-                        Reset Password
+                <div className="mt-4 flex items-center justify-end ">
+                    <PrimaryButton className="ms-4 bg-blue-500" disabled={processing} >
+                        Jelszó visszaállítása
                     </PrimaryButton>
                 </div>
             </form>

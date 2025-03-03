@@ -14,35 +14,33 @@ export default function VerifyEmail({ status }: { status?: string }) {
 
     return (
         <GuestLayout>
-            <Head title="Email Verification" />
+            <Head title="Email hitelesítés" />
 
-            <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
-                Thanks for signing up! Before getting started, could you verify
-                your email address by clicking on the link we just emailed to
-                you? If you didn't receive the email, we will gladly send you
-                another.
+            <div className="mb-4 text-sm text-gray-600 ">
+                Köszönjük hogy regisztráltál! Mielőtt elkezdjük,
+                erősítsd meg az e-mail címed az általunk küldött linken keresztül.
+                Ha nem kaptad meg az e-mailt, szívesen elküldjük újra.
             </div>
 
             {status === 'verification-link-sent' && (
-                <div className="mb-4 text-sm font-medium text-green-600 dark:text-green-400">
-                    A new verification link has been sent to the email address
-                    you provided during registration.
+                <div className="mb-4 text-sm font-medium text-green-600 ">
+                    Az új megerősítő linket elküldtük a regisztráció során megadott email címre.
                 </div>
             )}
 
             <form onSubmit={submit}>
                 <div className="mt-4 flex items-center justify-between">
                     <PrimaryButton disabled={processing}>
-                        Resend Verification Email
+                        Email hítelesítés újraküldése
                     </PrimaryButton>
 
                     <Link
                         href={route('logout')}
                         method="post"
                         as="button"
-                        className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:text-gray-400 dark:hover:text-gray-100 dark:focus:ring-offset-gray-800"
+                        className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     >
-                        Log Out
+                        Kijelentkezés
                     </Link>
                 </div>
             </form>
