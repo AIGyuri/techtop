@@ -22,15 +22,9 @@ export default function ForgotPassword({ status }: { status?: string }) {
 
             <div className="mb-4 text-sm text-gray-700 font">
                 <h2 className='text-center text-2xl font-bold bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-300 bg-clip-text text-transparent'>Elfelejtett jelszó</h2>
-            {/* <div className="mb-4 text-sm text-gray-700"> */}
-                {/* Forgot your password? No problem. Just let us know your email
-                address and we will email you a password reset link that will
-                allow you to choose a new one. */}
-               {/* Elfelejtette a jelszót? Csak add meg azt az e-mail címet, amellyel regisztráltál, és mi kiküldünk egy jelszó-visszaállítási linket, amellyel vissza tudod állítani a jelszót. */}
-               <p className='text-center font-medium'>
+                <p className='text-center font-medium'>
                Elfelejtetted a jelszavad? Semmi gond! Írd be az e-mail címed, és küldünk egy visszaállítási linket. Csak kattints rá, és állíts be egy új jelszót!
                </p>
-               
             </div>
 
             {status && (

@@ -71,15 +71,10 @@ export default function DeleteUserForm({
             <Modal show={confirmingUserDeletion} onClose={closeModal}>
                 <form onSubmit={deleteUser} className="p-6">
                     <h2 className="text-lg font-medium text-gray-900">
-                        {/* Are you sure you want to delete your account? */}
                         Tényleg törölni akarod az fiókodat?
                     </h2>
 
                     <p className="mt-1 text-sm text-gray-900">
-                        {/* Once your account is deleted, all of its resources and
-                        data will be permanently deleted. Please enter your
-                        password to confirm you would like to permanently delete
-                        your account. */}
                         Miután fiókját törölték, annak minden erőforrása és
                         adata véglegesen törlődik. Kérjük, adja meg
                         jelszavát a megerősítéshez, hogy véglegesen törölni
