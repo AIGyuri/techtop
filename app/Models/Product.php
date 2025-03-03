@@ -13,9 +13,9 @@ class Product extends Model
 
     public $timestamps = false;
 
-    public function category()
+    public function brand()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Brand::class);
     }
     
 }

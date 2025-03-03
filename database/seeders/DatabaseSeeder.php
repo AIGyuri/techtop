@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Category;
+use App\Models\Brand;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Product;
@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $categories = [
+        $brands = [
             [
                 'name' => 'Category 1',
                 'description' => 'Description 1',
@@ -39,8 +39,8 @@ class DatabaseSeeder extends Seeder
             ]  
             ];
 
-        foreach ($categories as $category) {
-            Category::create($category);
+        foreach ($brands as $brand) {
+            Brand::create($brand);
         }
 
         Product::factory(10)->create();

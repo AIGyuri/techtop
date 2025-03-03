@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderItemController;
 use App\Http\Controllers\ProductController;
@@ -29,9 +29,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
+Route::get('/brands', [BrandController::class, 'index'])->name('brands');
 
 Route::get('/products', [ProductController::class, 'index'])->name('products');
+
 Route::get('/products/{id}', [ProductController::class, 'show'])->name('product');
 
 Route::get('/users', [UserController::class, 'index'])->name('users');
@@ -39,9 +40,5 @@ Route::get('/users', [UserController::class, 'index'])->name('users');
 Route::get('/orders', [OrderController::class, 'index'])->name('orders');
 
 Route::get('/orders-items', [OrderItemController::class, 'index'])->name('orders-items');
-
-Route::get('/productslist', function () {
-    return Inertia::render('ProductListing');
-})->middleware(['auth', 'verified'])->name('productslist');
 
 require __DIR__ . '/auth.php';

@@ -13,7 +13,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return Product::with('category')->get();    
+        $products = Product::with('brand')->get();
+
+        return Inertia::render('Products', [
+            'products' => $products
+        ]);
     }
 
     /**

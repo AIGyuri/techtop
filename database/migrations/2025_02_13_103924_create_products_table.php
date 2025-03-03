@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer("price");
             $table->string("image");
             $table->integer("stock_quantity");
-            $table->foreignId("category_id")->constrained();
+            $table->foreignId("brand_id")->constrained();
             $table->dateTime("created_at");
         });
     }
