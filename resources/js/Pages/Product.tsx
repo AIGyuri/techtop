@@ -1,15 +1,7 @@
 
-import { Link } from '@inertiajs/react';
-interface Product {
-    id: number;
-    name: string;
-    description: string;
-    price: number;
-    image: string;
-    stock_quantity: number;
-    category_id: number;
-    created_at: string;
-}
+import CartButton from '@/Components/CartButton';
+import { Product } from '@/lib/utils';
+
 
 const ProductListing = ({ product }: { product: Product }) => {
     return (
@@ -33,14 +25,7 @@ const ProductListing = ({ product }: { product: Product }) => {
                             {product.description}
                         </span>
                     </div>
-
-                    <div className="mt-4 flex items-center justify-between gap-4">
-                        <p className="text-2xl font-extrabold leading-tight text-gray-900 ">{product.price} Ft</p>
-                        <Link href='#' className="inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300">
-                            Kosárba
-                        </Link>
-
-                    </div>
+                    <CartButton product={{ ...product, quantity: 1 }} />
                 </div>
             </div>
 

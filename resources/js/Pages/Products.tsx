@@ -1,16 +1,12 @@
+import CartButton from '@/Components/CartButton';
+import { addProductToLocalStorage, Product, ProductCart, removeProductFromLocalStorage } from '@/lib/utils';
 import { Link } from '@inertiajs/react';
 import { useState } from 'react';
 
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  image: string;
-  stock_quantity: number;
-  brand_id: number;
-  created_at: Date;
-}
+
+
+
+
 
 
 export default function Products({ products }: { products: Product[] }) {
@@ -45,8 +41,6 @@ export default function Products({ products }: { products: Product[] }) {
             <ProductCard key={index} product={product} />
           ))}
         </div>
-
-        
       </div>
 
       {/* Szűrő modal */}
@@ -81,15 +75,7 @@ const ProductCard = ({ product }: { product: Product }) => {
               {/* Quick look és favorite gombok */}
             </div>
           </div>
-      
-      
-          <div className="mt-4 flex items-center justify-between gap-4">
-            <p className="text-2xl font-extrabold leading-tight text-gray-900 ">{product.price} Ft</p>
-            <Link href='#' className="inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300">
-              Kosárba
-            </Link>
-      
-          </div>
+          <CartButton product={{ ...product, quantity: 1 }} />
         </div>
       </div>
     </Link>
