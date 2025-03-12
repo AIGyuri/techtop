@@ -1,13 +1,8 @@
 import CartButton from '@/Components/CartButton';
-import { addProductToLocalStorage, Product, ProductCart, removeProductFromLocalStorage } from '@/lib/utils';
+import { Product } from '@/lib/utils';
 import { Link } from '@inertiajs/react';
 import { useState } from 'react';
-
-
-
-
-
-
+import CartIcon from '@/Components/CartLink';
 
 export default function Products({ products }: { products: Product[] }) {
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
@@ -25,6 +20,7 @@ export default function Products({ products }: { products: Product[] }) {
             <h2 className="mt-3 text-4xl font-semibold text-gray-900">Techtop</h2>
           </div>
           <div className="flex items-center space-x-4">
+            <CartIcon />
             <button
               onClick={() => setIsFilterModalOpen(true)}
               className="flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 sm:w-auto"
