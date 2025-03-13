@@ -1,0 +1,16 @@
+laptop1: Apple MacBook Air 13" laptop, True Tone, Apple M1 processzor, 8 CPU mag és 7 GPU mag, 8 GB, 256 GB, Nemzetközi angol billentyűzet, Space Gray | 412.279 Ft
+----------------------------------------------------------------------------
+laptop2: Apple MacBook Air 13,6" laptop, Apple M2 chip 8 core CPU, 8GB, 512GB, Apple 10 core GPU, macOS, Magyar billentyűzet, Ezüst - 2022 (MLY03MG/A | 469.999 Ft
+----------------------------------------------------------------------------
+laptop3: Apple MacBook Air 13,6" laptop, Apple M2 chip 8 core CPU, 8GB, 256GB, Apple 8 core GPU, macOS, Magyar billentyűzet, Éjfekete - 2022 (MLY33MG/A) | 491.990 Ft
+----------------------------------------------------------------------------
+laptop4: Apple MacBook Air i3-1000NG4 8 GB RAM 256 GB SSD MAC OS Laptop | 486.850 Ft
+----------------------------------------------------------------------------
+laptop5: Apple MacBook Pro 13,3" laptop, Apple M2 chip 8 core CPU, 8GB, 512GB, Apple 10 core GPU, macOS, Magyar billentyűzet, Ezüst - 2022 (MNEQ3MG/A) | 649.990 Ft
+----------------------------------------------------------------------------
+laptop6: Apple MacBook Pro 14" laptop, Apple M3 chip 8 core, 8GB, 512GB SSD, Apple 10-core GPU, macOS, Magyar billentyűzet, Space Grey - 2023 | 695.290 Ft
+----------------------------------------------------------------------------
+laptop7: Apple MacBook Pro 14" laptop Apple M4 processzorral, 10 CPU mag, 10 GPU mag, 24 GB RAM, 1 TB SSD, Fekete, RO használati utasítás | 935.590 Ft
+----------------------------------------------------------------------------
+laptop8: MacBook Pro laptop, 16", Apple M4 Pro 14 magos processzor, 20 magos GPU, 24GB, 512GB SSD, Fekete | 1.158.990 Ft
+----------------------------------------------------------------------------

@@ -1,0 +1,42 @@
+lenovo1: Lenovo V15 G4 AMN 15,6" FHD laptop, AMD Ryzen™ 3 7320U, 8GB, 256GB SSD, AMD Radeon™ 610M Graphics, EFI Shell, Magyar billentyűzet, Fekete | 129.990 Ft
+----------------------------------------------------------------------------
+lenovo2: Lenovo IdeaPad 1 15IJL7 laptop Intel® Pentium® Silver N6000 proceszorral 3.3 GHz-ig, 15.6", Full HD, 4GB, 128GB eMMC, Intel® UHD Graphics, Windows® 11 Home in S mode, Nemzetközi angol billentyűzet, Cloud Grey | 132.990 Ft
+----------------------------------------------------------------------------
+lenovo3: Lenovo IdeaPad 1 15IAU7 15.6" FullHD TN 220nits laptop, Intel Core i3-1215U, 8GB, 256GB SSD, Intel® UHD Graphics, EFI Shell, Magyar billentyűzet, Szürke | 141.990 Ft
+----------------------------------------------------------------------------
+lenovo4: Lenovo IdeaPad 1 15ALC7 laptop, 15.6", FHD, AMD Ryzen™ 5 5500U, 16GB, 512GB SSD, AMD Radeon™ Graphics, NoOS, Nemzetközi angol billentyűzet, Szürke | 170.900 Ft
+----------------------------------------------------------------------------
+lenovo5: Lenovo V15 G4 IRU 15,6" FullHD laptop, Intel® Core™ i5-13420H, 8GB, 512GB SSD, Intel® UHD Graphics, FreeDOS, Magyar billentyűzet, Fekete | 181.180 Ft
+----------------------------------------------------------------------------
+lenovo6: Lenovo IdeaPad Slim 3 15IAH8 15.6" FHD laptop, Intel® Core™ i5-12450H, 16GB, 512GB SSD, Intel® UHD Graphics, NoOS, Nemzetközi angol billentyűzet, Kék | 202.990 Ft
+----------------------------------------------------------------------------
+lenovo7: Lenovo IdeaPad, AMD Ryzen 7 5700U, AMD Radeon Graphics, 40GB DDR4 Memória, 15.6 FullHD, 256GB SSD, Szürke, Magyar billentyűzet, Böngésző, Vírusirtó, Windows 11 Pro | 251.990 Ft
+----------------------------------------------------------------------------
+lenovo8: Lenovo LOQ 15IAX9I gaming laptop, 15.6", FHD, 144Hz, Intel® Core™ i5-12450HX, 2x12GB, 512GB SSD, Intel® Arc™ A530M 4GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke | 265.990 Ft
+----------------------------------------------------------------------------
+lenovo9: Laptop gaming Lenovo IdeaPad 3 15ACH6, 15.6", Full HD, AMD Ryzen 5 5500H, 8GB RAM, GeForce RTX 2050, 512GB SSD, No OS, Shadow Black | 276.397 Ft
+----------------------------------------------------------------------------
+lenovo10: Lenovo LOQ 15IAX9I gaming laptop, 15.6", FHD, IPS, 144Hz, Intel® Core™ i5-12450HX, 16GB, 512GB SSD, Intel® Arc™ A530M 4GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke | 321.900 Ft
+----------------------------------------------------------------------------
+lenovo11: Lenovo LOQ 15ARP9 gaming laptop, 15.6", FHD, IPS, 144Hz, AMD Ryzen™ 5 7235HS, 24GB, 1TB SSD, NVIDIA® GeForce RTX™ 3050 6GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke | 357.900 Ft
+----------------------------------------------------------------------------
+lenovo12: Lenovo LOQ 15IRX9 gaming laptop, 15.6", FHD, IPS, 144Hz, Intel® Core™ i5-13450HX, 12GB, 512GB SSD, NVIDIA® GeForce RTX™ 4050 6GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke | 407.900 Ft
+----------------------------------------------------------------------------
+lenovo13: Lenovo LOQ 15ARP9 gaming laptop, 15.6", FHD, IPS, 144Hz, AMD Ryzen™ 7 7435HS, 2x8GB, 512GB SSD, NVIDIA® GeForce RTX™ 4060 8GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürk | 441.476 Ft
+----------------------------------------------------------------------------
+lenovo14: Lenovo IdeaPad Pro 5 14IMH9 laptop, 14", 2.8K, OLED, 120Hz, Intel® Core™ Ultra 7 155H, 32GB, 1TB SSD, Intel® Arc™ Graphics, NoOS, Nemzetközi angol billentyűzet, Szürke | 460.900 Ft
+----------------------------------------------------------------------------
+lenovo15: Lenovo LOQ 15IRX9 gaming laptop, 15.6", FHD, IPS, 144Hz, Intel® Core™ i7-13650HX, 24GB, 1TB SSD, NVIDIA® GeForce RTX™ 4060 8GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke | 527.900 Ft
+----------------------------------------------------------------------------
+lenovo16: Lenovo Legion 5 Laptop, 16" WQXGA, Intel® Core™ i5 13450HX 4,6 GHz-ig, 16 GB RAM DDR5 4800, 512 GB SSD, NVIDIA® GeForce® RTX 4060 8 GB, Free Dos, Luna Grey DDR5 | 615.034 Ft
+----------------------------------------------------------------------------
+lenovo17: Lenovo Legion Pro 5 16ARX8 gaming laptop, 16", WQXGA, IPS, 240Hz, AMD Ryzen™ 9 7945HX, 2x16GB, 1TB SSD, NVIDIA® GeForce RTX™ 4060 8GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke | 736.900 Ft
+----------------------------------------------------------------------------
+lenovo18: Lenovo ThinkPad T14s Gen 6 ultrahordozható laptop Snapdragon® X Elite X1E-78-100 processzorral 3,4 GHz-ig, 14 hüvelykes WUXGA, IPS, Touch, 32 GB LPDDR5x, 1 TB SSD, Qualcomm® Adreno™, Windows 11 Pro, fekete, 3Y Premier támogatás | 1.050.907 Ft
+----------------------------------------------------------------------------
+lenovo19: Lenovo Legion Pro 5 16ARX8 gaming laptop, WQXGA, IPS, 240Hz, AMD Ryzen™ 7 7745HX, 2x16GB, 1TB SSD, NVIDIA® GeForce RTX™ 4060 8GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke | 1.113.208 Ft
+----------------------------------------------------------------------------
+lenovo20: Lenovo Legion Pro 7 16ARX8H gaming laptop, 16", WQXGA, IPS, 240Hz, AMD Ryzen™ 9 7945HX, 32GB, 1TB SSD, NVIDIA® GeForce RTX™ 4080 12GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke | 1.687.422 Ft
+----------------------------------------------------------------------------
+lenovo21Laptop Lenovo Legion 9 16IRX9 83G00041PB, 16 hüvelykes 3200 x 2000, Intel Core i9-14900HX 24 C / 32 T, 2,2 GHz - 5,8 GHz, 36 MB gyorsítótár, NTX 0TB, 64 GB DDR0 1 Pro , Fekete |  2.048.649 Ft
+----------------------------------------------------------------------------
