@@ -13,11 +13,11 @@ export interface ProductCart extends Product {
     quantity: number;
 }
 
-export async function getCartFromLocalStorage() {
+export function getCartFromLocalStorage() {
     return JSON.parse(localStorage.getItem('cart') || '[]') as ProductCart[];
 }
 
-export async function addProductToLocalStorage(product: ProductCart) {
+export function addProductToLocalStorage(product: ProductCart) {
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
     const existingItem = cart.find((item: ProductCart) => item.id === product.id);
     if (existingItem) {
@@ -28,7 +28,7 @@ export async function addProductToLocalStorage(product: ProductCart) {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-export async function removeProductFromLocalStorage(id: number) {
+export function removeProductFromLocalStorage(id: number) {
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
     const updatedCart = cart.filter((item: ProductCart) => item.id !== id);
     localStorage.setItem('cart', JSON.stringify(updatedCart));

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderItemController;
@@ -40,5 +41,7 @@ Route::get('/users', [UserController::class, 'index'])->name('users');
 Route::get('/orders', [OrderController::class, 'index'])->name('orders');
 
 Route::get('/orders-items', [OrderItemController::class, 'index'])->name('orders-items');
+
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 
 require __DIR__ . '/auth.php';
