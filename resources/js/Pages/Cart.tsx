@@ -1,9 +1,12 @@
-import { getCartFromLocalStorage, ProductCart, removeProductFromLocalStorage, updateProductLocalStorage } from "@/lib/utils";
+
+
+import { useCart } from "@/hooks/useCart";
+import { removeProductFromLocalStorage, updateProductLocalStorage } from "@/lib/utils";
+import { Link } from "@inertiajs/react";
 import { MinusIcon, PlusIcon, XIcon } from "lucide-react";
-import { useState } from "react";
 
 export default function Cart() {
-    const [cartItems, setCartItems] = useState<ProductCart[]>(getCartFromLocalStorage());
+    const { cartItems, setCartItems } = useCart();
 
     // Kosár összesítő kiszámítása (például teljes ár)
     const totalPrice = cartItems.reduce((total, item) => total + item.quantity * item.price, 0).toFixed(2);
@@ -14,10 +17,8 @@ export default function Cart() {
                 let decrementedQuantity = cartItem.quantity - 1
                 return { ...cartItem, quantity: decrementedQuantity }
             }
-
             return cartItem
         })
-
         setCartItems(decrementedCart)
         updateProductLocalStorage(decrementedCart)
     }
@@ -25,13 +26,11 @@ export default function Cart() {
     const handleCartItemQuantityIncrement = (id: number) => {
         const incrementedCart = cartItems.map((cartItem) => {
             if (cartItem.id === id) {
-                let decrementedQuantity = cartItem.quantity + 1
-                return { ...cartItem, quantity: decrementedQuantity }
+                let incrementedQuantity = cartItem.quantity + 1
+                return { ...cartItem, quantity: incrementedQuantity }
             }
-
             return cartItem
         })
-
         setCartItems(incrementedCart)
         updateProductLocalStorage(incrementedCart)
     }
@@ -39,61 +38,60 @@ export default function Cart() {
     const handleProductRemove = (id: number) => {
         const updatedCartItems = cartItems.filter((cartItem) => cartItem.id !== id);
         setCartItems(updatedCartItems);
-
         removeProductFromLocalStorage(id);
     }
 
     return (
-        <div className="bg-gray-50 min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+        <div style={{ backgroundColor: '#f4f4f9', minHeight: '100vh', padding: '2rem' }}>
+            <div style={{ maxWidth: '1200px', margin: 'auto' }}>
                 {/* Kosár fejléc */}
-                <h1 className="text-3xl font-semibold text-center text-gray-900 mb-8">Kosár</h1>
+                <h1 style={{ fontSize: '2rem', fontWeight: '600', textAlign: 'center', color: '#333', marginBottom: '2rem' }}>Kosár</h1>
 
                 {/* Kosár tartalom */}
-                <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div style={{ backgroundColor: '#fff', padding: '2rem', borderRadius: '8px', boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)' }}>
                     {/* Termékek listája */}
-                    <div className="space-y-4">
+                    <div style={{ marginBottom: '2rem' }}>
                         {cartItems.length === 0 ? (
-                            <p className="text-center text-gray-500">A kosarad üres.</p>
+                            <p style={{ textAlign: 'center', color: '#aaa' }}>A kosarad üres.</p>
                         ) : (
                             cartItems.map((cartItem) => (
-                                <div key={cartItem.id} className="flex justify-between items-center border-b border-gray-200 py-4">
+                                <div key={cartItem.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #ddd', padding: '1rem 0' }}>
                                     {/* Termék információk */}
-                                    <div className="flex items-center space-x-4">
+                                    <div style={{ display: 'flex', alignItems: 'center' }}>
                                         <img
                                             src={cartItem.image}
                                             alt={cartItem.name}
-                                            className="h-16 w-16 object-cover rounded-md"
+                                            style={{ height: '64px', width: '64px', objectFit: 'cover', borderRadius: '8px' }}
                                         />
-                                        <div>
-                                            <h3 className="text-lg font-medium text-gray-900">{cartItem.name}</h3>
-                                            <p className="text-sm text-gray-600">Ár: {cartItem.price} Ft</p>
+                                        <div style={{ marginLeft: '1rem' }}>
+                                            <h3 style={{ fontSize: '1rem', fontWeight: '500', color: '#333' }}>{cartItem.name}</h3>
+                                            <p style={{ fontSize: '0.875rem', color: '#777' }}>Ár: {cartItem.price} Ft</p>
                                         </div>
                                     </div>
                                     {/* Mennyiség és összeg */}
-                                    <div className="flex items-center space-x-2">
-                                        <span className="text-gray-800">Kosárba helyezett termékek darabszáma: {cartItem.quantity}</span>
-                                        <span className="text-gray-800">Összesen: {(cartItem.quantity * cartItem.price)} Ft</span>
+                                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                                        <span style={{ color: '#555', marginRight: '1rem' }}>Kosárba helyezett termékek darabszáma: {cartItem.quantity}</span>
+                                        <span style={{ color: '#555', marginRight: '1rem' }}>Összesen: {(cartItem.quantity * cartItem.price)} Ft</span>
+                                        <button 
+                                            onClick={() => handleCartItemQuantityDecrement(cartItem.id)} 
+                                            style={{ border: '1px solid #ccc', borderRadius: '4px', padding: '0.5rem', backgroundColor: '#fff' }}
+                                            disabled={cartItem.quantity === 1}
+                                        >
+                                            <MinusIcon style={{ width: '16px', height: '16px', color: '#555' }} />
+                                        </button>
+                                        <button 
+                                            onClick={() => handleCartItemQuantityIncrement(cartItem.id)} 
+                                            style={{ border: '1px solid #ccc', borderRadius: '4px', padding: '0.5rem', backgroundColor: '#fff' }}
+                                        >
+                                            <PlusIcon style={{ width: '16px', height: '16px', color: '#555' }} />
+                                        </button>
+                                        <button
+                                            onClick={() => handleProductRemove(cartItem.id)}
+                                            style={{ border: '1px solid #ccc', borderRadius: '4px', padding: '0.5rem', backgroundColor: '#fff' }}
+                                        >
+                                            <XIcon style={{ width: '16px', height: '16px', color: '#e63946' }} />
+                                        </button>
                                     </div>
-                                    <button 
-                                        onClick={() => handleCartItemQuantityDecrement(cartItem.id)} 
-                                        className="border border-gray-500 rounded-md w-6 h-6 flex items-center justify-center"
-                                        disabled={cartItem.quantity === 1}
-                                    >
-                                        <MinusIcon className="w-4 h-4" />
-                                    </button>
-                                    <button 
-                                        onClick={() => handleCartItemQuantityIncrement(cartItem.id)} 
-                                        className="border border-gray-500 rounded-md w-6 h-6 flex items-center justify-center"
-                                    >
-                                        <PlusIcon className="w-4 h-4" />
-                                    </button>
-                                    <button
-                                        onClick={() => handleProductRemove(cartItem.id)}
-                                        className="border border-gray-500 rounded-md w-6 h-6 flex items-center justify-center"
-                                    >
-                                        <XIcon className="w-4 h-4" />
-                                    </button>
                                 </div>
                             ))
                         )}
@@ -101,21 +99,31 @@ export default function Cart() {
 
                     {/* Kosár összesítő */}
                     {cartItems.length > 0 && (
-                        <div className="mt-6 border-t pt-4 text-right">
-                            <h2 className="text-xl font-semibold text-gray-900">Összesen: {totalPrice} Ft</h2>
-                            <div className="mt-4 flex justify-end space-x-4">
+                        <div style={{ marginTop: '2rem', borderTop: '1px solid #ddd', paddingTop: '1rem', textAlign: 'right' }}>
+                            <h2 style={{ fontSize: '1.25rem', fontWeight: '600', color: '#333' }}>Összesen: {totalPrice} Ft</h2>
+                            <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
                                 <button onClick={() => {
                                     setCartItems([]);
                                     localStorage.removeItem('cart')
-                                }} className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600">
+                                }} style={{ backgroundColor: '#e63946', color: 'white', padding: '0.75rem 1.5rem', borderRadius: '8px', cursor: 'pointer', transition: 'background-color 0.3s' }}>
                                     Kosár ürítése
                                 </button>
-                                <button className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">
+                                <button style={{ backgroundColor: '#2a9d8f', color: 'white', padding: '0.75rem 1.5rem', borderRadius: '8px', cursor: 'pointer', transition: 'background-color 0.3s' }}>
                                     Tovább a pénztárhoz
                                 </button>
                             </div>
+
+                              {/* Vissza a termékekhez gomb */}
                         </div>
                     )}
+                    <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+                        <Link
+                            href="/products"
+                            style={{ backgroundColor: '#1d3557', color: 'white', padding: '0.75rem 1.5rem', borderRadius: '8px', cursor: 'pointer', transition: 'background-color 0.3s' }}
+                        >
+                            Vissza a termékekhez
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
