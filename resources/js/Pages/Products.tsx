@@ -17,7 +17,9 @@ export default function Products({ products }: { products: Product[] }) {
             <nav className="flex" aria-label="Breadcrumb">
               {/* Kenyér morzsa navigáció */}
             </nav>
-            <h2 className="mt-3 text-4xl font-semibold text-gray-900">Techtop</h2>
+            <Link href="/">
+              <h2 className="mt-3 text-4xl font-semibold text-gray-900">Techtop</h2>
+            </Link>
           </div>
           <div className="flex items-center space-x-4">
             <CartIcon />
