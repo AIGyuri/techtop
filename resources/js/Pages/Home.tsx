@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
-import { Head, Link } from '@inertiajs/react';
+import { Head, Link, } from '@inertiajs/react';
 import LOGO from './Logo/techtoplogo.png';
+import RegisterIcon from '@/Components/registerlink';
+import LoginIcon from '@/Components/LoginLink';
+
+
+
+
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
@@ -8,7 +14,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <Head title="Homepage" />
-      <nav className="bg-white antialiased">
+      <nav className="bg-gray-200 antialiased">
         <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-72">
@@ -33,18 +39,18 @@ const Navbar: React.FC = () => {
                 </li>
                 <li className="shrink-0">
                   <Link
-                    href="#"
-                    className="flex text-sm font-medium text-gray-900 hover:text-primary-700"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li className="shrink-0">
-                  <Link
                     href="/products"
                     className="flex text-sm font-medium text-gray-900 hover:text-primary-700"
                   >
                     Products
+                  </Link>
+                </li>
+                <li className="shrink-0">
+                  <Link
+                    href="#"
+                    className="flex text-sm font-medium text-gray-900 hover:text-primary-700"
+                  >
+                    Box3
                   </Link>
                 </li>
                 <li className="shrink-0">
@@ -60,7 +66,7 @@ const Navbar: React.FC = () => {
                     href="#"
                     className="text-sm font-medium text-gray-900 hover:text-primary-700"
                   >
-                    Box5
+                    About
                   </Link>
                 </li>
               </ul>
@@ -73,24 +79,8 @@ const Navbar: React.FC = () => {
                   id="handleRegisterRedirect"
                   className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
                 >
-                  <svg
-                    className="w-6 h-6 text-gray-800"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M16 12h4m-2 2v-4M4 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                    />
-                  </svg>
-                  <span className="hidden sm:flex">Register</span>
+                  <RegisterIcon/>
+                  Register
                 </Link>
               </div>
 
@@ -100,21 +90,7 @@ const Navbar: React.FC = () => {
                   id="userDropdownButton1"
                   className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
                 >
-                  <svg
-                    className="w-5 h-5 me-1"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                    />
-                  </svg>
+                  <LoginIcon/>  
                   Login
                 </Link>
               </div>
@@ -183,6 +159,9 @@ const Navbar: React.FC = () => {
           )}
         </div>
       </nav>
+      {/* <div>
+        <Mainbanner/>
+      </div> */}
     </>
   );
 };
