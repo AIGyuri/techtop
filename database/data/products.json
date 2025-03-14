@@ -2,78 +2,71 @@
     {
         "name": "Acer Aspire Lite 15 AL15-31P-C8NC",
         "description": "Acer Aspire Lite 15 AL15-31P-C8NC Laptop Intel® Celeron® N4500 processzorral 2,8 GHz-ig, 15,6 Full HD, IPS, 8 GB DDR4 RAM, 256 GB SSD, Intel® UHD grafika, No OS, Acélszürke",
-        "price": 92090 ,
-        "stock_quantity": 15, 
-        "image": "img/acer1.png",	
+        "price": 92090,
+        "stock_quantity": 15,
+        "image": "img/acer1.png",
         "brand_id": 1,
         "created_at": "2023-08-01 10:00:00"
     },
-
     {
         "name": "Acer Aspire 3 A31515,6 FullHD",
         "description": "AMD® Ryzen™ 5 7520U, 8GB, 256GB SSD, AMD® Radeon™, EFI Shell, Magyar billentyűzet, Ezüst",
         "price": 124900,
-        "stock_quantity": 24, 
+        "stock_quantity": 24,
         "image": "img/acer2.png",
         "brand_id": 1,
         "created_at": "2023-08-01 10:00:00"
     },
-
     {
         "name": "Acer Aspire A315-35-P60C 15.6 FullHD",
         "description": "Intel® Pentium Silver N6000, 4GB, 128GB SSD, Intel® UHD Graphics, Windows 11 Home S, Magyar billentyűzet, Ezüst",
         "price": 148990,
-        "stock_quantity": 12, 
+        "stock_quantity": 12,
         "image": "img/acer3.png",
         "brand_id": 1,
         "created_at": "2023-08-01 10:00:00"
     },
-
     {
         "name": "Acer Aspire 3 A315-59-33J8",
         "description": "Intel® Core™ i3-1215U processzorral akár 4,40 GHz, 15,6, Full HD, 8GB DDR4, 512GB SSD, Intel® UHD Graphics, NO OS, Nemzetközi angol billentyűzet, Ezüst",
         "price": 151154,
-        "stock_quantity": 35, 
+        "stock_quantity": 35,
         "image": "img/acer4.png",
         "brand_id": 1,
         "created_at": "2023-08-01 10:00:00"
     },
-
     {
         "name": "Acer Aspire 3 A315-44P-R92B",
         "description": "AMD Ryzen™ 5 5500U processzorral max. 4.0 GHz, 15.6, Full HD, 8GB DDR4, 512GB SSD, AMD Radeon™ Graphics, No OS, Nemzetközi angol billentyűzet, Ezüst",
         "price": 166097,
-        "stock_quantity": 22, 
+        "stock_quantity": 22,
         "image": "img/acer5.png",
         "brand_id": 1,
         "created_at": "2023-08-01 10:00:00"
     },
-
     {
         "name": "Acer Aspire 3 A315-44P-R9PH",
         "description": "AMD Ryzen™ 7 5700U processzorral 4,3 GHz-ig, 15,6, Full-HD, 16 GB DDR4 RAM, 512 GB SSD, AMD Radeon™ Graphics, No OS, Ezüst",
         "price": 273757,
-        "stock_quantity": 40, 
+        "stock_quantity": 40,
         "image": "img/acer6.png",
         "brand_id": 1,
         "created_at": "2023-08-01 10:00:00"
     },
-
     {
         "name": "Acer Aspire 5 A515-57-73EX",
         "description": "Intel® Core™ i7-12650H processzorral akár 4,7 GHz, 15,6, Full HD, IPS, 16GB DDR4, 1 TB SSD, Intel® UHD Graphics, No OS, Nemzetközi angol billentyűzet, Acélszürke",
         "price": 293207,
-        "stock_quantity": 11, 
+        "stock_quantity": 11,
         "image": "img/acer7.png",
         "brand_id": 1,
         "created_at": "2023-08-01 10:00:00"
     },
-
     {
         "name": "Acer Nitro 5",
         "description": "AN515-58, 15,6 hüvelykes 1920 x 1080, Intel Core i5-12450H 8 C / 12 T, 3,3 GHz - 4,4 GHz, 12 MB gyorsítótár, 16 GB DDR4, 512 GB SSD, Nvidia Geforce RTX 3050, Free DOS",
         "price": 360933,
-        "stock_quantity": 29, 
+        "stock_quantity": 29,
         "image": "img/acer8.png",
         "brand_id": 1,
         "created_at": "2023-08-01 10:00:00"
@@ -82,7 +75,7 @@
         "name": "Acer Aspire 16 A16-51GM-72MV Gaming Laptop",
         "description": "Intel® Core™ 7 150U processzorral 5,4 GHz-ig, 16, WUXGA, IPS, 16 GB RAM DDR5, 512 GB SSD, NVIDIA® Geforce® RTX™ 2050, 4 GB GDDR6, No OS, Acélszürke",
         "price": 370390,
-        "stock_quantity": 32, 
+        "stock_quantity": 32,
         "image": "img/acer9.png",
         "brand_id": 1,
         "created_at": "2023-08-01 10:00:00"
@@ -91,7 +84,7 @@
         "name": "Acer Nitro 16 AN16-51-554N Gaming Laptop",
         "description": "Intel® Core® i5-13420H processzorral akár 4,7 GHz, 16, WUXGA, 165 Hz, IPS, 16 GB DDR5 RAM, 512 GB SSD, NVIDIA® GeForce RTX™ 4050 6GB GDDR6, No OS, Fekete",
         "price": 372690,
-        "stock_quantity": 48, 
+        "stock_quantity": 48,
         "image": "img/acer10.png",
         "brand_id": 1,
         "created_at": "2023-08-01 10:00:00"
@@ -100,7 +93,7 @@
         "name": "Acer Predator Helios Neo 14 PHN14-51-51VM Gaming laptop",
         "description": "Intel® Core™ Ultra 5 125H processzorral akár 4,50 GHz-ig, 14,5  WQXGA, 120 Hz, IPS, 16 GB LPDDR5X, 512 GB GGB SSD, VIDIA® GeForce RTX™ 4060 8GB GDDR6, No OS, Fekete",
         "price": 520190,
-        "stock_quantity": 21, 
+        "stock_quantity": 21,
         "image": "img/acer11.png",
         "brand_id": 1,
         "created_at": "2023-08-01 10:00:00"
@@ -109,7 +102,7 @@
         "name": "Acer Predator Triton 14 PT14-51-70BP Gaming Laptop ",
         "description": "Intel® Core™ i7 13700H processzorral akár 5,0 GHz-ig, 14, WQXGA IPS 165 Hz, 16 GB LPDDR5 RAM, 1 TB SSD, NVIDIA® GeForce RTX™ 4070, No OS, Ezüst",
         "price": 787990,
-        "stock_quantity": 9, 
+        "stock_quantity": 9,
         "image": "img/acer12.png",
         "brand_id": 1,
         "created_at": "2023-08-01 10:00:00"
@@ -118,12 +111,542 @@
         "name": "Acer Predator Helios 3D 15 PH3D15-71-98VT Gaming laptop",
         "description": "Intel® Core™ i9 13900HX processzorral akár 5,4 GHz-ig, 15,6 hüvelykes, 3D UHD IPS, 32 GB DDR5 RAM, 2 x 1 TB SSD, NVIDIA® GeForce RTX™ 4080 12GB GDDR6, Windows 11 Home, Fekete",
         "price": 1217990,
-        "stock_quantity": 18, 
+        "stock_quantity": 18,
         "image": "img/acer13.png",
         "brand_id": 1,
         "created_at": "2023-08-01 10:00:00"
-    }
+    },
+
+
+
+
+
+
     
-]
+        {
+            "name": "ASUS X515 A516KA laptop",
+            "description": "Intel® Celeron® N4500 processzorral max 2.80 GHz, 15,6\" FHD, 8GB RAM, 512GB SSD, Intel® UHD Graphics, No OS, Nemzetközi angol billentyűzet, Szürke",
+            "price": 109990,
+            "stock_quantity": 10,
+            "image": "img/asus1.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "ASUS VivoBook 15 A1504VA laptop",
+            "description": "Intel®Core™ i3-1215U processzorral max 4.40 GHz, 15.6\", Full HD, 8GB, 512GB SSD, Intel® UHD Graphics, No OS, Nemzetközi angol billentyűzet, Kék",
+            "price": 142990,
+            "stock_quantity": 15,
+            "image": "img/asus2.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "ASUS Flip TM420IA",
+            "description": "Ryzen 5 4500U, 8 GB DDR4, Radeon Graphics, Touch, 2 az 1-ben, Windows 10 Home",
+            "price": 193690,
+            "stock_quantity": 8,
+            "image": "img/asus3.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Asus Vivobook X15 Laptop",
+            "description": "Intel i5-1335U, 24GB Memória, 512GB SSD, 15.6\" FullHD kijelző, Ezüst, Magyar billentyűzet, Böngésző, Vírusirtó, Windows 11 Pro",
+            "price": 233990,
+            "stock_quantity": 5,
+            "image": "img/asus4.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Gaming laptop ASUS TUF A15 FA506NC",
+            "description": "AMD Ryzen™ 5 7535HS processzor 16M gyorsítótár, akár 4,55 GHz 15,6\" FHD 144Hz, 16GB, 512GB SSD, nVidia GeForce RTX 3050 @4GB, fekete",
+            "price": 288844,
+            "stock_quantity": 6,
+            "image": "img/asus5.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "ASUS TUF F15 FX507ZC4 Gaming laptop",
+            "description": "Intel® Core™ i5-12500H, 15,6\", Full HD, IPS, 144 Hz, 16 GB DDR4, 512 GB SSD, NVIDIA® GeForce RTX™ 3050 4 GB GDDR6, No OS, Szürke",
+            "price": 347249,
+            "stock_quantity": 8,
+            "image": "img/asus6.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "ASUS TUF A15 FA507NUR Gaming laptop",
+            "description": "AMD Ryzen™ 7 7435HS processzorral akár 4,5 GHz-ig, 15,6\", Full HD, IPS, 144 Hz, 16 GB DDR5 RAM, 512 GB SSD, NVIDIA® GeForce RTX™ 4050 6GB GDDR6, No OS, Mechaszürke",
+            "price": 380990,
+            "stock_quantity": 4,
+            "image": "img/asus7.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "ASUS TUF Gaming A15 FA507NUR Gaming laptop",
+            "description": "AMD Ryzen™ 7 7435HS processzorral akár 4,55 GHz-ig, 15,6 hüvelykes Full HD, IPS, 144 Hz, 16 GB DDR5, 512 GB SSD, NVIDIA® GeForce RTX™ 4050 6GB GDDR6, No OS, Mechaszürke",
+            "price": 440900,
+            "stock_quantity": 6,
+            "image": "img/asus8.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "ASUS TUF F15 FX507VU Gaming laptop",
+            "description": "Intel® Core™ i7-13620H processzorral akár 4,9 GHz-ig, 15,6\", Full HD, IPS, 144 Hz, 16 GB DDR5 RAM, 1 TB SSD, NVIDIA® GeForce RTX™ 4050 6GB GDDR6, No OS, Mechaszürke",
+            "price": 498490,
+            "stock_quantity": 3,
+            "image": "img/asus9.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "ASUS TUF Gaming A15 Gamer Laptop",
+            "description": "AMD Ryzen 7 7435HS, 48GB DDR5 Memória, 1000GB SSD, Nvidia Geforce RTX 4050, 15.6 FullHD, Magyar billentyűzet, Fekete, Vírusírtó, Böngésző, Windows 11 Pro",
+            "price": 527990,
+            "stock_quantity": 4,
+            "image": "img/asus10.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "ASUS TUF A14 FA401WU Gaming laptop",
+            "description": "AMD Ryzen™ AI 9 HX 370 processzorral 5,10 GHz-ig, 14\", 2,5K, IPS, 165 Hz, 16 GB LPDDR5X, 1 TB SSD, NVIDIA® GeForce RTX™ 4050 6GB GDDR6 TGP 100W, No OS, Jaegerszürke",
+            "price": 665900,
+            "stock_quantity": 3,
+            "image": "img/asus11.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "ASUS TUF A15 FA507UV Gaming laptop",
+            "description": "AMD Ryzen™ 9 8945H processzorral max. 5.2 GHz, 15.6\", Full HD, IPS, 144Hz, 16GB, 512GB SSD, NVIDIA® GeForce RTX™ 4060 8GB GDDR6, No OS, Nemzetközi angol billentyűzet, Mechaszürke",
+            "price": 878785,
+            "stock_quantity": 2,
+            "image": "img/asus12.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "ASUS Zenbook Pro 14 Duo UX8402ZE laptop",
+            "description": "Intel® Core™ i7-12700H processzor 4.70 GHz-ig, 14.5\", 2.8K OLED, Touch, 16 GB, 1 TB SSD, NVIDIA® GeForce® RTX™ 3050 Ti 4 GB, Windows 11 Pro, Fekete",
+            "price": 1194525,
+            "stock_quantity": 4,
+            "image": "img/asus13.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "ASUS ROG Strix SCAR 16 G634JZR Gaming Laptop",
+            "description": "Intel Core i9 14900HX processzorral akár 5,8 GHz, 16 hüvelykes QHD+, IPS, 240 Hz, 32 GB DDR5, 1 TB SSD, NVIDIA GeForce RTX 408, operációs rendszer nélkül, Off Black",
+            "price": 1800476,
+            "stock_quantity": 1,
+            "image": "img/asus14.png",
+            "brand_id": 2,
+            "created_at": "2023-08-01 10:00:00"
+        },
+    
+    
 
 
+
+
+
+
+
+
+    
+        {
+            "name": "Lenovo V15 G4 AMN 15,6\" FHD laptop",
+            "description": "AMD Ryzen™ 3 7320U, 8GB, 256GB SSD, AMD Radeon™ 610M Graphics, EFI Shell, Magyar billentyűzet, Fekete",
+            "price": 129990,
+            "stock_quantity": 10,
+            "image": "img/lenovo1.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo IdeaPad 1 15IJL7 laptop",
+            "description": "Intel® Pentium® Silver N6000, 3.3 GHz, 15.6\" Full HD, 4GB, 128GB eMMC, Intel® UHD Graphics, Windows® 11 Home in S mode, Nemzetközi angol billentyűzet, Cloud Grey",
+            "price": 132990,
+            "stock_quantity": 15,
+            "image": "img/lenovo2.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo IdeaPad 1 15IAU7 15.6\" FullHD TN",
+            "description": "Intel Core i3-1215U, 8GB, 256GB SSD, Intel® UHD Graphics, EFI Shell, Magyar billentyűzet, Szürke",
+            "price": 141990,
+            "stock_quantity": 12,
+            "image": "img/lenovo3.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo IdeaPad 1 15ALC7 laptop",
+            "description": "AMD Ryzen™ 5 5500U, 16GB, 512GB SSD, AMD Radeon™ Graphics, NoOS, Nemzetközi angol billentyűzet, Szürke",
+            "price": 170900,
+            "stock_quantity": 20,
+            "image": "img/lenovo4.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo V15 G4 IRU 15,6\" FullHD laptop",
+            "description": "Intel® Core™ i5-13420H, 8GB, 512GB SSD, Intel® UHD Graphics, FreeDOS, Magyar billentyűzet, Fekete",
+            "price": 181180,
+            "stock_quantity": 25,
+            "image": "img/lenovo5.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo IdeaPad Slim 3 15IAH8 15.6\" FHD laptop",
+            "description": "Intel® Core™ i5-12450H, 16GB, 512GB SSD, Intel® UHD Graphics, NoOS, Nemzetközi angol billentyűzet, Kék",
+            "price": 202990,
+            "stock_quantity": 18,
+            "image": "img/lenovo6.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo IdeaPad, AMD Ryzen 7 5700U",
+            "description": "AMD Radeon Graphics, 40GB DDR4 Memória, 15.6 FullHD, 256GB SSD, Szürke, Magyar billentyűzet, Böngésző, Vírusirtó, Windows 11 Pro",
+            "price": 251990,
+            "stock_quantity": 22,
+            "image": "img/lenovo7.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo LOQ 15IAX9I gaming laptop",
+            "description": "15.6\", FHD, 144Hz, Intel® Core™ i5-12450HX, 2x12GB, 512GB SSD, Intel® Arc™ A530M 4GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke",
+            "price": 265990,
+            "stock_quantity": 30,
+            "image": "img/lenovo8.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Laptop gaming Lenovo IdeaPad 3 15ACH6",
+            "description": "AMD Ryzen 5 5500H, 8GB RAM, GeForce RTX 2050, 512GB SSD, No OS, Shadow Black",
+            "price": 276397,
+            "stock_quantity": 12,
+            "image": "img/lenovo9.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo LOQ 15IAX9I gaming laptop",
+            "description": "15.6\", FHD, IPS, 144Hz, Intel® Core™ i5-12450HX, 16GB, 512GB SSD, Intel® Arc™ A530M 4GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke",
+            "price": 321900,
+            "stock_quantity": 5,
+            "image": "img/lenovo10.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo LOQ 15ARP9 gaming laptop",
+            "description": "15.6\", FHD, IPS, 144Hz, AMD Ryzen™ 5 7235HS, 24GB, 1TB SSD, NVIDIA® GeForce RTX™ 3050 6GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke",
+            "price": 357900,
+            "stock_quantity": 18,
+            "image": "img/lenovo11.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo LOQ 15IRX9 gaming laptop",
+            "description": "15.6\", FHD, IPS, 144Hz, Intel® Core™ i5-13450HX, 12GB, 512GB SSD, NVIDIA® GeForce RTX™ 4050 6GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke",
+            "price": 407900,
+            "stock_quantity": 15,
+            "image": "img/lenovo12.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo LOQ 15ARP9 gaming laptop",
+            "description": "15.6\", FHD, IPS, 144Hz, AMD Ryzen™ 7 7435HS, 2x8GB, 512GB SSD, NVIDIA® GeForce RTX™ 4060 8GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke",
+            "price": 441476,
+            "stock_quantity": 8,
+            "image": "img/lenovo13.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo IdeaPad Pro 5 14IMH9 laptop",
+            "description": "14\", 2.8K, OLED, 120Hz, Intel® Core™ Ultra 7 155H, 32GB, 1TB SSD, Intel® Arc™ Graphics, NoOS, Nemzetközi angol billentyűzet, Szürke",
+            "price": 460900,
+            "stock_quantity": 10,
+            "image": "img/lenovo14.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo LOQ 15IRX9 gaming laptop",
+            "description": "15.6\", FHD, IPS, 144Hz, Intel® Core™ i7-13650HX, 24GB, 1TB SSD, NVIDIA® GeForce RTX™ 4060 8GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke",
+            "price": 527900,
+            "stock_quantity": 6,
+            "image": "img/lenovo15.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo Legion 5 Laptop",
+            "description": "16\" WQXGA, Intel® Core™ i5 13450HX 4,6 GHz-ig, 16 GB RAM DDR5 4800, 512 GB SSD, NVIDIA® GeForce® RTX 4060 8 GB, Free Dos, Luna Grey",
+            "price": 615034,
+            "stock_quantity": 5,
+            "image": "img/lenovo16.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo Legion Pro 5 16ARX8 gaming laptop",
+            "description": "16\", WQXGA, IPS, 240Hz, AMD Ryzen™ 9 7945HX, 2x16GB, 1TB SSD, NVIDIA® GeForce RTX™ 4060 8GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke",
+            "price": 736900,
+            "stock_quantity": 10,
+            "image": "img/lenovo17.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo ThinkPad T14s Gen 6 ultrahordozható laptop",
+            "description": "Snapdragon® X Elite X1E-78-100, 3.4 GHz, 14 hüvelykes WUXGA, IPS, Touch, 32 GB LPDDR5x, 1 TB SSD, Qualcomm® Adreno™, Windows 11 Pro, fekete, 3Y Premier támogatás",
+            "price": 1050907,
+            "stock_quantity": 3,
+            "image": "img/lenovo18.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo Legion Pro 5 16ARX8 gaming laptop",
+            "description": "WQXGA, IPS, 240Hz, AMD Ryzen™ 7 7745HX, 2x16GB, 1TB SSD, NVIDIA® GeForce RTX™ 4060 8GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke",
+            "price": 1113208,
+            "stock_quantity": 5,
+            "image": "img/lenovo19.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo Legion Pro 7 16ARX8H gaming laptop",
+            "description": "16\", WQXGA, IPS, 240Hz, AMD Ryzen™ 9 7945HX, 32GB, 1TB SSD, NVIDIA® GeForce RTX™ 4080 12GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Szürke",
+            "price": 1687422,
+            "stock_quantity": 2,
+            "image": "img/lenovo20.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+        {
+            "name": "Lenovo Legion 9 16IRX9 83G00041PB",
+            "description": "16 hüvelykes 3200 x 2000, Intel Core i9-14900HX 24 C / 32 T, 2,2 GHz - 5,8 GHz, 36 MB gyorsítótár, NTX 0TB, 64 GB DDR4, Fekete",
+            "price": 2048649,
+            "stock_quantity": 4,
+            "image": "img/lenovo21.png",
+            "brand_id": 3,
+            "created_at": "2023-08-01 10:00:00"
+        },
+    
+    
+
+
+
+
+
+
+
+        
+            {
+                "name": "Apple MacBook Air 13\"",
+                "description": "Apple MacBook Air 13\" laptop, True Tone, Apple M1 processzor, 8 CPU mag és 7 GPU mag, 8 GB, 256 GB, Nemzetközi angol billentyűzet, Space Gray",
+                "price": 412279,
+                "stock_quantity": 15,
+                "image": "img/macbook1.png",
+                "brand_id": 4,
+                "created_at": "2023-08-01 10:00:00"
+            },
+            {
+                "name": "Apple MacBook Air 13,6\"",
+                "description": "Apple MacBook Air 13,6\" laptop, Apple M2 chip 8 core CPU, 8GB, 512GB, Apple 10 core GPU, macOS, Magyar billentyűzet, Ezüst - 2022 (MLY03MG/A)",
+                "price": 469999,
+                "stock_quantity": 20,
+                "image": "img/macbook2.png",
+                "brand_id": 4,
+                "created_at": "2023-08-01 10:00:00"
+            },
+            {
+                "name": "Apple MacBook Air 13,6\"",
+                "description": "Apple MacBook Air 13,6\" laptop, Apple M2 chip 8 core CPU, 8GB, 256GB, Apple 8 core GPU, macOS, Magyar billentyűzet, Éjfekete - 2022 (MLY33MG/A)",
+                "price": 491990,
+                "stock_quantity": 18,
+                "image": "img/macbook3.png",
+                "brand_id": 4,
+                "created_at": "2023-08-01 10:00:00"
+            },
+            {
+                "name": "Apple MacBook Air i3-1000NG4",
+                "description": "Apple MacBook Air i3-1000NG4 8 GB RAM 256 GB SSD MAC OS Laptop",
+                "price": 486850,
+                "stock_quantity": 12,
+                "image": "img/macbook4.png",
+                "brand_id": 4,
+                "created_at": "2023-08-01 10:00:00"
+            },
+            {
+                "name": "Apple MacBook Pro 13,3\"",
+                "description": "Apple MacBook Pro 13,3\" laptop, Apple M2 chip 8 core CPU, 8GB, 512GB, Apple 10 core GPU, macOS, Magyar billentyűzet, Ezüst - 2022 (MNEQ3MG/A)",
+                "price": 649990,
+                "stock_quantity": 22,
+                "image": "img/macbook5.png",
+                "brand_id": 4,
+                "created_at": "2023-08-01 10:00:00"
+            },
+            {
+                "name": "Apple MacBook Pro 14\"",
+                "description": "Apple MacBook Pro 14\" laptop, Apple M3 chip 8 core, 8GB, 512GB SSD, Apple 10-core GPU, macOS, Magyar billentyűzet, Space Grey - 2023",
+                "price": 695290,
+                "stock_quantity": 17,
+                "image": "img/macbook6.png",
+                "brand_id": 4,
+                "created_at": "2023-08-01 10:00:00"
+            },
+            {
+                "name": "Apple MacBook Pro 14\"",
+                "description": "Apple MacBook Pro 14\" laptop Apple M4 processzorral, 10 CPU mag, 10 GPU mag, 24 GB RAM, 1 TB SSD, Fekete, RO használati utasítás",
+                "price": 935590,
+                "stock_quantity": 10,
+                "image": "img/macbook7.png",
+                "brand_id": 4,
+                "created_at": "2023-08-01 10:00:00"
+            },
+            {
+                "name": "MacBook Pro 16\"",
+                "description": "MacBook Pro laptop, 16\", Apple M4 Pro 14 magos processzor, 20 magos GPU, 24GB, 512GB SSD, Fekete",
+                "price": 1158990,
+                "stock_quantity": 8,
+                "image": "img/macbook8.png",
+                "brand_id": 4,
+                "created_at": "2023-08-01 10:00:00"
+            },
+        
+        
+
+
+
+
+
+
+            
+                {
+                    "name": "MSI Gaming Thin 15 B12UC-1460 15.6\" FullHD 144Hz laptop",
+                    "description": "Intel Core i5-12450H, 8GB, 512GB M.2, GeForce RTX 3050 4GB, EFI Shell, Magyar billentyűzet, Fekete",
+                    "price": 266970,
+                    "stock_quantity": 10,
+                    "image": "img/msi1.png",
+                    "brand_id": 5,
+                    "created_at": "2023-08-01 10:00:00"
+                },
+                {
+                    "name": "MSI Thin 15 B12UC Gamer Laptop",
+                    "description": "i5-12450H, 15.6\" FullHD 144Hz kijelző, 512 GB SSD, 8GB Memória, Geforce RTX 3050 4GB Videókártya, Böngésző, Vírusirtó, Magyar kiosztás, Windows 11 Pro",
+                    "price": 295990,
+                    "stock_quantity": 15,
+                    "image": "img/msi2.png",
+                    "brand_id": 5,
+                    "created_at": "2023-08-01 10:00:00"
+                },
+                {
+                    "name": "MSI Katana GF66 11UE Gaming laptop",
+                    "description": "15.6\", FHD, IPS, 144Hz, Intel® Core™ i7-11800H, 16GB, 1TB SSD, NVIDIA® GeForce RTX 3060 6GB GDDR6, NoOS, Nemzetközi angol billentyűzet, Fekete",
+                    "price": 344990,
+                    "stock_quantity": 8,
+                    "image": "img/msi3.png",
+                    "brand_id": 5,
+                    "created_at": "2023-08-01 10:00:00"
+                },
+                {
+                    "name": "MSI Gamer Laptop",
+                    "description": "Intel i5 12450H, 64GB Memória, 2048GB SSD, Nvidia GeForce RTX 3050, 15.6 FullHD 144Hz kijelző, Szürke, Magyar billentyűzet, Böngésző, Vírusirtó, Windows 11 Pro",
+                    "price": 424990,
+                    "stock_quantity": 5,
+                    "image": "img/msi4.png",
+                    "brand_id": 5,
+                    "created_at": "2023-08-01 10:00:00"
+                },
+                {
+                    "name": "MSI Gaming Cyborg 15 A13VF laptop",
+                    "description": "15.6\", IPS, 144Hz, Intel® Core™ i7-13620H, 16GB, 1TB SSD, NVIDIA® GeForce RTX™ 4060 8GB GDDR6, No OS, Nemzetközi angol billentyűzet, Fekete",
+                    "price": 429890,
+                    "stock_quantity": 12,
+                    "image": "img/msi5.png",
+                    "brand_id": 5,
+                    "created_at": "2023-08-01 10:00:00"
+                },
+                {
+                    "name": "Gaming Laptop MSI Thin A15 B7VE-427XRO",
+                    "description": "AMD Ryzen™ 5 7535HS processzorral akár 4,55 GHz-ig, 15,6 hüvelykes Full HD, 144 Hz, IPS, 16 GB DDR5 RAM, 512 GB SSD, NVIDIA GeForce RTX 4050",
+                    "price": 471225,
+                    "stock_quantity": 8,
+                    "image": "img/msi6.png",
+                    "brand_id": 5,
+                    "created_at": "2023-08-01 10:00:00"
+                },
+                {
+                    "name": "Laptop Gaming MSI Cyborg 15 A13VF",
+                    "description": "Intel® Core™ i5-13420H 12M gyorsítótár, akár 4,60 GHz, 15,6\" FHD 144Hz, 16GB, 512GB SSD, nVidia GeForce RTX 4060 @8GB, fekete",
+                    "price": 502204,
+                    "stock_quantity": 10,
+                    "image": "img/msi7.png",
+                    "brand_id": 5,
+                    "created_at": "2023-08-01 10:00:00"
+                },
+                {
+                    "name": "Laptop MSI Katana 15",
+                    "description": "15,6\" Full HD, Intel® Core™ i7 13620H 4,9 GHz-ig, 16 GB RAM DDR5 5200, 1 TB SSD, NVIDIA® GeForce® RTX 4070 8 GB, Free Dos, fekete DDR5",
+                    "price": 644322,
+                    "stock_quantity": 5,
+                    "image": "img/msi8.png",
+                    "brand_id": 5,
+                    "created_at": "2023-08-01 10:00:00"
+                },
+                {
+                    "name": "MSI Prestige 13 AI+ Evo A2VMG laptop",
+                    "description": "Intel® Core Ultra 7 258V processzorral 4,8 GHz-ig, 13,3\", IPS, 32 GB LPDDR5x RAM, 1 TB SSD, Intel® Arc™ Graphics, Windows 11 Home, szürke/fekete/stellar",
+                    "price": 790081,
+                    "stock_quantity": 6,
+                    "image": "img/msi9.png",
+                    "brand_id": 5,
+                    "created_at": "2023-08-01 10:00:00"
+                },
+                {
+                    "name": "MSI Stealth A16 AI+ A3XVFG Gaming laptop",
+                    "description": "AMD Ryzen™ AI 9 HX 370 processzorral 5,1 GHz-ig, 16\", IPS, QHD+, 240 Hz, 32 GB LDDDR5x, 1 TB SSD, NVIDIA® GeForce RTX™ 8GB GDDR6, Windows 11 Home, Fekete",
+                    "price": 918790,
+                    "stock_quantity": 4,
+                    "image": "img/msi10.png",
+                    "brand_id": 5,
+                    "created_at": "2023-08-01 10:00:00"
+                },
+                {
+                    "name": "MSI Pulse 15 B13VGK 15.6\" QHD 240Hz Gaming laptop",
+                    "description": "Intel® Core™ i7-13700H, 32GB, 1TB SSD, Nvidia GeForce RTX 4070 8GB GDDR6, FreeDOS, Nemzetközi angol billentyűzet, Szürke",
+                    "price": 1249047,
+                    "stock_quantity": 3,
+                    "image": "img/msi11.png",
+                    "brand_id": 5,
+                    "created_at": "2023-08-01 10:00:00"
+                },
+                {
+                    "name": "Gaming laptop MSI Titan GT77HX 13VI",
+                    "description": "Intel® Core™ i9-13980HX processzorral akár 5,60 GHz, 17,3\", UHD, IPS, 144 Hz, 64 GB DDR5, 2 TB SSD, NVIDIA® GeForce RTX™ 4090 16GB GDDR6, Windows 11 Pro, Core fekete",
+                    "price": 2060857,
+                    "stock_quantity": 2,
+                    "image": "img/msi12.png",
+                    "brand_id": 5,
+                    "created_at": "2023-08-01 10:00:00"
+                }
+            ]
+            

@@ -28,6 +28,8 @@ laptop14: ASUS ROG Strix SCAR 16 G634JZR Gaming Laptop Intel Core i9 14900HX pro
 
 
 
+
+
 lenovo1: Lenovo V15 G4 AMN 15,6" FHD laptop, AMD Ryzen™ 3 7320U, 8GB, 256GB SSD, AMD Radeon™ 610M Graphics, EFI Shell, Magyar billentyűzet, Fekete | 129.990 Ft
 ----------------------------------------------------------------------------
 lenovo2: Lenovo IdeaPad 1 15IJL7 laptop Intel® Pentium® Silver N6000 proceszorral 3.3 GHz-ig, 15.6", Full HD, 4GB, 128GB eMMC, Intel® UHD Graphics, Windows® 11 Home in S mode, Nemzetközi angol billentyűzet, Cloud Grey | 132.990 Ft

@@ -57,7 +57,7 @@ const ProductCard = ({ product }: { product: Product }) => {
 
   return (
     <Link href={`/products/${product.id}`}>
-      <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+      <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm h-full flex flex-col justify-between">
         <div className="h-56 w-full">
           <img className="mx-auto h-full" src={product.image} alt={product.name} />
         </div>

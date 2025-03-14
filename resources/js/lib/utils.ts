@@ -28,6 +28,11 @@ export function addProductToLocalStorage(product: ProductCart) {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+export function updateProductLocalStorage(products: ProductCart[]) {
+    localStorage.removeItem('cart')
+    localStorage.setItem('cart', JSON.stringify(products));
+}
+
 export function removeProductFromLocalStorage(id: number) {
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
     const updatedCart = cart.filter((item: ProductCart) => item.id !== id);

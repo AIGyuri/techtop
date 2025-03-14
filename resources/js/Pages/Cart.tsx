@@ -1,5 +1,5 @@
-import { getCartFromLocalStorage, ProductCart } from "@/lib/utils";
-import { MinusIcon } from "lucide-react";
+import { getCartFromLocalStorage, ProductCart, removeProductFromLocalStorage, updateProductLocalStorage } from "@/lib/utils";
+import { MinusIcon, PlusIcon, XIcon } from "lucide-react";
 import { useState } from "react";
 
 export default function Cart() {
@@ -8,8 +8,39 @@ export default function Cart() {
     // Kosár összesítő kiszámítása (például teljes ár)
     const totalPrice = cartItems.reduce((total, item) => total + item.quantity * item.price, 0).toFixed(2);
 
-    const handleCartItemQuantityChange = (id: number) => {
-        
+    const handleCartItemQuantityDecrement = (id: number) => {
+        const decrementedCart = cartItems.map((cartItem) => {
+            if (cartItem.id === id) {
+                let decrementedQuantity = cartItem.quantity - 1
+                return { ...cartItem, quantity: decrementedQuantity }
+            }
+
+            return cartItem
+        })
+
+        setCartItems(decrementedCart)
+        updateProductLocalStorage(decrementedCart)
+    }
+
+    const handleCartItemQuantityIncrement = (id: number) => {
+        const incrementedCart = cartItems.map((cartItem) => {
+            if (cartItem.id === id) {
+                let decrementedQuantity = cartItem.quantity + 1
+                return { ...cartItem, quantity: decrementedQuantity }
+            }
+
+            return cartItem
+        })
+
+        setCartItems(incrementedCart)
+        updateProductLocalStorage(incrementedCart)
+    }
+
+    const handleProductRemove = (id: number) => {
+        const updatedCartItems = cartItems.filter((cartItem) => cartItem.id !== id);
+        setCartItems(updatedCartItems);
+
+        removeProductFromLocalStorage(id);
     }
 
     return (
@@ -44,8 +75,24 @@ export default function Cart() {
                                         <span className="text-gray-800">Kosárba helyezett termékek darabszáma: {cartItem.quantity}</span>
                                         <span className="text-gray-800">Összesen: {(cartItem.quantity * cartItem.price)} Ft</span>
                                     </div>
-                                    <button onClick={() => handleCartItemQuantityChange(cartItem.id)} className="border border-gray-500 rounded-md w-6 h-6 flex items-center justify-center">
+                                    <button 
+                                        onClick={() => handleCartItemQuantityDecrement(cartItem.id)} 
+                                        className="border border-gray-500 rounded-md w-6 h-6 flex items-center justify-center"
+                                        disabled={cartItem.quantity === 1}
+                                    >
                                         <MinusIcon className="w-4 h-4" />
+                                    </button>
+                                    <button 
+                                        onClick={() => handleCartItemQuantityIncrement(cartItem.id)} 
+                                        className="border border-gray-500 rounded-md w-6 h-6 flex items-center justify-center"
+                                    >
+                                        <PlusIcon className="w-4 h-4" />
+                                    </button>
+                                    <button
+                                        onClick={() => handleProductRemove(cartItem.id)}
+                                        className="border border-gray-500 rounded-md w-6 h-6 flex items-center justify-center"
+                                    >
+                                        <XIcon className="w-4 h-4" />
                                     </button>
                                 </div>
                             ))
