@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -14,9 +15,11 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::with('brand')->get();
+        $brands = Brand::all();
 
         return Inertia::render('Products', [
-            'products' => $products
+            'products' => $products,
+            'brands' => $brands
         ]);
     }
 

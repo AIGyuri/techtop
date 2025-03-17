@@ -7,6 +7,11 @@ export interface Product {
     stock_quantity: number;
     brand_id: number;
     created_at: Date;
+    brand: {
+        id: number;
+        name: string;
+        description: string;
+    }
 }
 
 export interface ProductCart extends Product {

@@ -1,12 +1,30 @@
 import CartButton from '@/Components/CartButton';
 import { Product } from '@/lib/utils';
 import { Link } from '@inertiajs/react';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import CartIcon from '@/Components/CartLink';
 
-export default function Products({ products }: { products: Product[] }) {
-  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
-  const [selectedSort, setSelectedSort] = useState('');
+interface Brand {
+  id: number;
+  name: string;
+  description: string;
+}
+
+export default function Products({ products, brands }: { products: Product[], brands: Brand[] }) {
+  const [brandFilterState, setBrandFilterState] = useState("");
+  const [filterState, setFilterState] = useState("");
+
+  const filteredProducts = useMemo(() => {
+    const filteredProducts = brandFilterState ? products.filter(product => product.brand.name === brandFilterState) : products;
+
+    if (filterState === "asc") {
+      return filteredProducts.sort((a, b) => a.price - b.price);
+    } else if (filterState === "desc") {
+      return filteredProducts.sort((a, b) => b.price - a.price);
+    } else {
+      return filteredProducts;
+    }
+  }, [brandFilterState, filterState])
 
   return (
     <section className="bg-gray-50 py-8 antialiased ">
@@ -23,32 +41,32 @@ export default function Products({ products }: { products: Product[] }) {
           </div>
           <div className="flex items-center space-x-4">
             <CartIcon />
-            <button
-              onClick={() => setIsFilterModalOpen(true)}
-              className="flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 sm:w-auto"
-            >
-              Filters
-            </button>
+            <select name="filter" id="filter" value={filterState} onChange={(e) => setFilterState(e.target.value)}>
+              <option value="">Rendezés</option>
+              <option value="asc">Ár szerint növekvő</option>
+              <option value="desc">Ár szerint csökkenő</option>
+            </select>
+            <select name="brandFilter" id="brandFilter" onChange={(e) => setBrandFilterState(e.target.value)}>
+              <option value="">Összes</option>
+              {brands.map((brand) => (
+                <option key={brand.id} value={brand.name}>{brand.name}</option>
+              ))}
+            </select>
             {/* Rendezés dropdown */}
           </div>
         </div>
 
         {/* Termék grid */}
         <div className="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
-          {products.map((product, index) => (
+          {filteredProducts ? filteredProducts.map((product, index) => (
             <ProductCard key={index} product={product} />
-          ))}
+          )) : (
+            <div>
+              <span>Nem található termékek</span>
+            </div>
+          )}
         </div>
       </div>
-
-      {/* Szűrő modal */}
-      {isFilterModalOpen && (
-        <div className="fixed left-0 right-0 top-0 z-50 h-modal w-full overflow-y-auto overflow-x-hidden p-4 md:inset-0 md:h-full">
-          <div className="relative h-full w-full max-w-xl md:h-auto">
-            {/* Modal tartalom */}
-          </div>
-        </div>
-      )}
     </section>
   );
 };
