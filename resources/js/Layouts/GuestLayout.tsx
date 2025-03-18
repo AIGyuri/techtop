@@ -2,8 +2,8 @@
 import { Link } from '@inertiajs/react';
 import { PropsWithChildren, useState } from 'react';
 import LOGO from '../Logo/techtoplogo.png';
-import LoginIcon from '@/Components/LoginLink';
-import { UserRoundIcon } from 'lucide-react';
+// import LoginIcon from '@/Components/LoginLink';
+import { UserPlus, UserRoundIcon } from 'lucide-react';
 
 export default function Guest({ children }: PropsWithChildren) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
@@ -75,7 +75,7 @@ export default function Guest({ children }: PropsWithChildren) {
                                     id="handleRegisterRedirect"
                                     className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
                                 >
-                                    <UserRoundIcon className='w-4 h-4' />
+                                    <UserPlus className='w-5 h-4' />
                                     Register
                                 </Link>
                             </div>
@@ -86,7 +86,8 @@ export default function Guest({ children }: PropsWithChildren) {
                                     id="userDropdownButton1"
                                     className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
                                 >
-                                    <LoginIcon />
+                                    {/* <LoginIcon /> */}
+                                    <UserRoundIcon className='w-4 h-4' />
                                     Login
                                 </Link>
                             </div>
