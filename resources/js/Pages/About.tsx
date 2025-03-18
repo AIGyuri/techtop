@@ -5,8 +5,8 @@ export default function About() {
     return (
         <GuestLayout>
             
-            (
-    <div className="bg-blue-100 min-h-screen py-8">
+            
+    <div className="bg-blue-400 min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Oldal címe */}
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-16 tracking-wide">Rólunk</h1>
@@ -20,7 +20,7 @@ export default function About() {
               <img
                 src="/img/profil.jpg"  // Petra képének elérési útja
                 alt="Petra"
-                className="w-40 h-40 object-cover rounded-full shadow-lg border-4 border-blue-500"
+                className="w-40 h-40 object-cover rounded-full shadow-lg border-2 border-blue-500"
               />
             </div>
             <h2 className="text-3xl font-semibold text-gray-800 mb-4 hover:text-blue-600 transition-all">Petra</h2>
@@ -41,7 +41,7 @@ export default function About() {
               <img
                 src="/path/to/gyuri.jpg"  // Gyuri képének elérési útja
                 alt="Gyuri"
-                className="w-40 h-40 object-cover rounded-full shadow-lg border-4 border-blue-500"
+                className="w-40 h-40 object-cover rounded-full shadow-lg border-2 border-blue-500"
               />
             </div>
             <h2 className="text-3xl font-semibold text-gray-800 mb-4 hover:text-blue-600 transition-all">Gyuri</h2>
