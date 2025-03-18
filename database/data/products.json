@@ -9,8 +9,8 @@
         "created_at": "2023-08-01 10:00:00"
     },
     {
-        "name": "Acer Aspire 3 A31515,6 FullHD",
-        "description": "AMD® Ryzen™ 5 7520U, 8GB, 256GB SSD, AMD® Radeon™, EFI Shell, Magyar billentyűzet, Ezüst",
+        "name": "Acer Aspire 3 A31515",
+        "description": "AMD® Ryzen™ 5 7520U,6 FullHD, 8GB, 256GB SSD, AMD® Radeon™, EFI Shell, Magyar billentyűzet, Ezüst",
         "price": 124900,
         "stock_quantity": 24,
         "image": "img/acer2.png",
@@ -18,8 +18,8 @@
         "created_at": "2023-08-01 10:00:00"
     },
     {
-        "name": "Acer Aspire A315-35-P60C 15.6 FullHD",
-        "description": "Intel® Pentium Silver N6000, 4GB, 128GB SSD, Intel® UHD Graphics, Windows 11 Home S, Magyar billentyűzet, Ezüst",
+        "name": "Acer Aspire A315-35-P60C",
+        "description": "Intel® Pentium Silver N6000,15.6 FullHD, 4GB, 128GB SSD, Intel® UHD Graphics, Windows 11 Home S, Magyar billentyűzet, Ezüst",
         "price": 148990,
         "stock_quantity": 12,
         "image": "img/acer3.png",
@@ -99,7 +99,7 @@
         "created_at": "2023-08-01 10:00:00"
     },
     {
-        "name": "Acer Predator Triton 14 PT14-51-70BP Gaming Laptop ",
+        "name": "Acer Predator Triton 14 PT14-51-70BP Gaming Laptop",
         "description": "Intel® Core™ i7 13700H processzorral akár 5,0 GHz-ig, 14, WQXGA IPS 165 Hz, 16 GB LPDDR5 RAM, 1 TB SSD, NVIDIA® GeForce RTX™ 4070, No OS, Ezüst",
         "price": 787990,
         "stock_quantity": 9,
@@ -261,8 +261,8 @@
 
     
         {
-            "name": "Lenovo V15 G4 AMN 15,6\" FHD laptop",
-            "description": "AMD Ryzen™ 3 7320U, 8GB, 256GB SSD, AMD Radeon™ 610M Graphics, EFI Shell, Magyar billentyűzet, Fekete",
+            "name": "Lenovo V15 G4 AMN  laptop",
+            "description": "AMD Ryzen™ 3 7320U, 8GB,15,6\" FullHD, 256GB SSD, AMD Radeon™ 610M Graphics, EFI Shell, Magyar billentyűzet, Fekete",
             "price": 129990,
             "stock_quantity": 10,
             "image": "img/lenovo1.png",
@@ -279,8 +279,8 @@
             "created_at": "2023-08-01 10:00:00"
         },
         {
-            "name": "Lenovo IdeaPad 1 15IAU7 15.6\" FullHD TN",
-            "description": "Intel Core i3-1215U, 8GB, 256GB SSD, Intel® UHD Graphics, EFI Shell, Magyar billentyűzet, Szürke",
+            "name": "Lenovo IdeaPad 1 15IAU7 TN",
+            "description": "Intel Core i3-1215U, 8GB,15.6\" FullHD, 256GB SSD, Intel® UHD Graphics, EFI Shell, Magyar billentyűzet, Szürke",
             "price": 141990,
             "stock_quantity": 12,
             "image": "img/lenovo3.png",
@@ -297,8 +297,8 @@
             "created_at": "2023-08-01 10:00:00"
         },
         {
-            "name": "Lenovo V15 G4 IRU 15,6\" FullHD laptop",
-            "description": "Intel® Core™ i5-13420H, 8GB, 512GB SSD, Intel® UHD Graphics, FreeDOS, Magyar billentyűzet, Fekete",
+            "name": "Lenovo V15 G4 IRU laptop",
+            "description": "Intel® Core™ i5-13420H,15,6\" FullHD, 8GB, 512GB SSD, Intel® UHD Graphics, FreeDOS, Magyar billentyűzet, Fekete",
             "price": 181180,
             "stock_quantity": 25,
             "image": "img/lenovo5.png",
@@ -306,8 +306,8 @@
             "created_at": "2023-08-01 10:00:00"
         },
         {
-            "name": "Lenovo IdeaPad Slim 3 15IAH8 15.6\" FHD laptop",
-            "description": "Intel® Core™ i5-12450H, 16GB, 512GB SSD, Intel® UHD Graphics, NoOS, Nemzetközi angol billentyűzet, Kék",
+            "name": "Lenovo IdeaPad Slim 3 15IAH8 laptop",
+            "description": "Intel® Core™ i5-12450H,15.6\" FullHD,  16GB, 512GB SSD, Intel® UHD Graphics, NoOS, Nemzetközi angol billentyűzet, Kék",
             "price": 202990,
             "stock_quantity": 18,
             "image": "img/lenovo6.png",
@@ -541,8 +541,8 @@
 
             
                 {
-                    "name": "MSI Gaming Thin 15 B12UC-1460 15.6\" FullHD 144Hz laptop",
-                    "description": "Intel Core i5-12450H, 8GB, 512GB M.2, GeForce RTX 3050 4GB, EFI Shell, Magyar billentyűzet, Fekete",
+                    "name": "MSI Gaming Thin 15 laptop",
+                    "description": "Intel Core i5-12450H,B12UC-1460, 15.6\" FullHD 144Hz, 8GB, 512GB M.2, GeForce RTX 3050 4GB, EFI Shell, Magyar billentyűzet, Fekete",
                     "price": 266970,
                     "stock_quantity": 10,
                     "image": "img/msi1.png",
@@ -568,7 +568,7 @@
                     "created_at": "2023-08-01 10:00:00"
                 },
                 {
-                    "name": "MSI Gamer Laptop",
+                    "name": "MSI Thin 15 B12UC-1460 laptop",
                     "description": "Intel i5 12450H, 64GB Memória, 2048GB SSD, Nvidia GeForce RTX 3050, 15.6 FullHD 144Hz kijelző, Szürke, Magyar billentyűzet, Böngésző, Vírusirtó, Windows 11 Pro",
                     "price": 424990,
                     "stock_quantity": 5,
@@ -631,8 +631,8 @@
                     "created_at": "2023-08-01 10:00:00"
                 },
                 {
-                    "name": "MSI Pulse 15 B13VGK 15.6\" QHD 240Hz Gaming laptop",
-                    "description": "Intel® Core™ i7-13700H, 32GB, 1TB SSD, Nvidia GeForce RTX 4070 8GB GDDR6, FreeDOS, Nemzetközi angol billentyűzet, Szürke",
+                    "name": "MSI Pulse 15 B13VGK Gaming laptop",
+                    "description": "Intel® Core™ i7-13700H,15.6\" QHD 240Hz, 32GB, 1TB SSD, Nvidia GeForce RTX 4070 8GB GDDR6, FreeDOS, Nemzetközi angol billentyűzet, Szürke",
                     "price": 1249047,
                     "stock_quantity": 3,
                     "image": "img/msi11.png",
