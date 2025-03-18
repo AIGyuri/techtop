@@ -2,14 +2,14 @@
 import { Link } from '@inertiajs/react';
 import { PropsWithChildren, useState } from 'react';
 import LOGO from '../Logo/techtoplogo.png';
-import LoginIcon from '@/Components/LoginLink';
-import { UserRoundIcon } from 'lucide-react';
+
+import { UserPlus, UserRoundIcon } from 'lucide-react';
 
 export default function Guest({ children }: PropsWithChildren) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
     
     return (
-        <div className="">
+        <div>
             <nav className="bg-gray-200 antialiased">
                 <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0 py-4">
                     <div className="flex items-center justify-between">
@@ -75,7 +75,7 @@ export default function Guest({ children }: PropsWithChildren) {
                                     id="handleRegisterRedirect"
                                     className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
                                 >
-                                    <UserRoundIcon className='w-4 h-4' />
+                                    <UserPlus className='w-6 h-4' />
                                     Register
                                 </Link>
                             </div>
@@ -86,7 +86,7 @@ export default function Guest({ children }: PropsWithChildren) {
                                     id="userDropdownButton1"
                                     className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
                                 >
-                                    <LoginIcon />
+                                    <UserRoundIcon className='w-6 h-4' />
                                     Login
                                 </Link>
                             </div>
@@ -155,10 +155,11 @@ export default function Guest({ children }: PropsWithChildren) {
                     )}
                 </div>
             </nav>
-
-            <div className="">
-                {children}
-            </div>
+            <div className="flex min-h-screen flex-col items-center bg-gray-50 pt-6 sm:justify-center sm:pt-0">             
+                <div className="mt-6 w-full overflow-hidden bg-white px-6 py-4 shadow-md sm:max-w-md sm:rounded-lg">
+                    {children}
+                </div>
+            </div> 
         </div>
     );
 }
