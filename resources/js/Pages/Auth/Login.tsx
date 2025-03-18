@@ -41,15 +41,16 @@ export default function Login({
 
                 <form onSubmit={submit}>
                     <div>
-                        <h2 className="text-center text-3xl font-bold bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-300 bg-clip-text text-transparent">
+                        <h2 className="text-center text-3xl font-bold bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-300 bg-clip-text text-transparent mb-4">
                             Bejelentkezés
                         </h2>
-                        <InputLabel htmlFor="email" value="Email" />
+                        <InputLabel htmlFor="email" />
 
                         <TextInput
                             id="email"
                             type="email"
                             name="email"
+                            placeholder="email"
                             value={data.email}
                             className="mt-1 block w-full"
                             autoComplete="username"
@@ -68,12 +69,13 @@ export default function Login({
                     </div>
 
                     <div className="mt-4">
-                        <InputLabel htmlFor="password" value="Jelszó" />
+                        <InputLabel htmlFor="password" />
 
                         <TextInput
                             id="password"
                             type="password"
                             name="password"
+                            placeholder="jelszó"
                             value={data.password}
                             className="mt-1 block w-full"
                             autoComplete="current-password"
@@ -114,7 +116,7 @@ export default function Login({
                         {canResetPassword && (
                             <Link
                                 href={route("password.request")}
-                                className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2"
+                                className="rounded-md text-sm text-blue-600 underline hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2"
                             >
                                 Elfelejtette a jelszót?
                             </Link>
