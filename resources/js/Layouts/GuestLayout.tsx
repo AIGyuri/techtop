@@ -27,7 +27,7 @@ export default function Guest({ children }: PropsWithChildren) {
                             <ul className="hidden lg:flex items-center justify-center gap-10 md:gap-8 py-3 sm:justify-center">
                                 <li>
                                     <Link
-                                        href="#"
+                                        href="/"
                                         className="flex text-sm font-medium text-gray-900 hover:text-primary-700"
                                     >
                                         Home
