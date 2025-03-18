@@ -15,13 +15,11 @@ export default function Guest({ children }: PropsWithChildren) {
                     <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-72">
                             <div className="shrink-0">
-                                <Link href="#" title="">
                                     <img
                                         className="block w-auto h-8"
                                         src={LOGO}
                                         alt="LOGO"
                                     />
-                                </Link>
                             </div>
 
                             <ul className="hidden lg:flex items-center justify-center gap-10 md:gap-8 py-3 sm:justify-center">

@@ -41,7 +41,7 @@ export default function About() {
               <img
                 src="/path/to/gyuri.jpg"  // Gyuri képének elérési útja
                 alt="Gyuri"
-                className="w-40 h-40 object-cover rounded-full shadow-lg border-4 border-blue-500"
+                className="w-40 h-40 object-cover rounded-full shadow-lg border-2 border-blue-500"
               />
             </div>
             <h2 className="text-3xl font-semibold text-gray-800 mb-4 hover:text-blue-600 transition-all">Gyuri</h2>
