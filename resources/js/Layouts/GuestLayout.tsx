@@ -10,7 +10,7 @@ export default function Guest({ children }: PropsWithChildren) {
     
     return (
         <div className="">
-            <nav className="bg-gray-200 antialiased">
+            <nav className="bg-blue-400 antialiased">
                 <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0 py-4">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-72">
