@@ -26,17 +26,18 @@ export default function Register() {
         <div className="flex min-h-screen flex-col items-center bg-gray-50 pt-6 sm:justify-center sm:pt-0">
             <div className="mt-6 w-full overflow-hidden bg-white px-6 py-4 shadow-md sm:max-w-md sm:rounded-lg">
                 <Head title="Register" />
-                <h2 className="text-center text-3xl font-bold bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-300 bg-clip-text text-transparent">
+                <h2 className="text-center text-3xl font-bold bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-300 bg-clip-text text-transparent mb-4">
                     Regisztráció
                 </h2>
 
                 <form onSubmit={submit}>
                     <div>
-                        <InputLabel htmlFor="name" value="Név" />
+                        <InputLabel htmlFor="name"  />
 
                         <TextInput
                             id="name"
                             name="name"
+                            placeholder="Név"
                             value={data.name}
                             className="mt-1 block w-full"
                             autoComplete="name"
@@ -49,12 +50,13 @@ export default function Register() {
                     </div>
 
                     <div className="mt-4">
-                        <InputLabel htmlFor="email" value="Email" />
+                        <InputLabel htmlFor="email"/>
 
                         <TextInput
                             id="email"
                             type="email"
                             name="email"
+                            placeholder="E-mail"
                             value={data.email}
                             className="mt-1 block w-full"
                             autoComplete="username"
@@ -66,12 +68,13 @@ export default function Register() {
                     </div>
 
                     <div className="mt-4">
-                        <InputLabel htmlFor="password" value="Jelszó" />
+                        <InputLabel htmlFor="password" />
 
                         <TextInput
                             id="password"
                             type="password"
                             name="password"
+                            placeholder="Jelszó"
                             value={data.password}
                             className="mt-1 block w-full"
                             autoComplete="new-password"
@@ -90,13 +93,14 @@ export default function Register() {
                     <div className="mt-4">
                         <InputLabel
                             htmlFor="password_confirmation"
-                            value="Jelszó megerősítése"
+                            
                         />
 
                         <TextInput
                             id="password_confirmation"
                             type="password"
                             name="password_confirmation"
+                            placeholder="Jelszó megerésítése"
                             value={data.password_confirmation}
                             className="mt-1 block w-full"
                             autoComplete="new-password"
