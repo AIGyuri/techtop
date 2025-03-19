@@ -57,10 +57,16 @@
   - Árak szerint
   - Márkák szerint
 - Termékek rendelése
-- név változtatás
-- jelszó változtatás
+- Név változtatás
+- Jelszó változtatás
+- Email változtatás
   
 ### Funckciók a vezérlőpulban amit az admin tud használni:
+- Termékek kezelése
+    - Termékek felvétele és törlése  
+- Fiókok kezelése
+    - Fiókok felvétele és törlése
+- Rendelési státusz kezelése
 
 ### A függőségek telepítéséhez nyisd meg a root mappát a terminálban, majd
 
@@ -71,6 +77,10 @@ npm install
 Tailwind csomag telepítése
 ```sh
 npm install -D tailwindcss postcss autoprefixer
+```
+Lucide telepítése:
+```sh
+npm install lucide-react
 ```
 Futtatás:
 ```sh
