@@ -1,9 +1,11 @@
 import CartButton from '@/Components/CartButton';
 import { Product } from '@/lib/utils';
 import { Link } from '@inertiajs/react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import CartIcon from '@/Components/CartLink';
 import GuestLayout from '@/Layouts/GuestLayout';
+import { Button } from '@headlessui/react';
+import { ArrowUp } from 'lucide-react';
 
 interface Brand {
   id: number;
@@ -14,6 +16,7 @@ interface Brand {
 export default function Products({ products, brands }: { products: Product[], brands: Brand[] }) {
   const [brandFilterState, setBrandFilterState] = useState("");
   const [filterState, setFilterState] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
 
   const filteredProducts = useMemo(() => {
     const filteredProducts = brandFilterState ? products.filter(product => product.brand.name === brandFilterState) : products;
@@ -27,9 +30,36 @@ export default function Products({ products, brands }: { products: Product[], br
     }
   }, [brandFilterState, filterState])
 
+  const checkScrollPosition = () => {
+    if (window.scrollY > window.innerHeight) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', checkScrollPosition);
+
+    return () => {
+      window.removeEventListener('scroll', checkScrollPosition);
+    }
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
   return (
     <GuestLayout>
-      <section className="bg-gray-50 py-8 antialiased ">
+      <section className="bg-gray-50 py-8 antialiased relative">
+        {/* vissza a tetejére gomb */}
+        <Button className={`flex items-center ${isVisible ? 'block' : 'hidden'} fixed bottom-5 right-5 p-3 bg-blue-600 hover:opacity-90 rounded-lg text-white`} onClick={scrollToTop}>
+          Vissza a tetejére <ArrowUp className='w-4 h-4 ml-2' />
+        </Button>
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
           {/* Fejléc és szűrők */}
           <div className="mb-4 items-end justify-end space-y-4 sm:flex sm:space-y-0 md:mb-8">
