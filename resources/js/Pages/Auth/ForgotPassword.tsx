@@ -2,7 +2,7 @@ import InputError from "@/Components/InputError";
 import PrimaryButton from "@/Components/PrimaryButton";
 import TextInput from "@/Components/TextInput";
 import GuestLayout from "@/Layouts/GuestLayout";
-import { Head, useForm } from "@inertiajs/react";
+import { Head, Link, useForm } from "@inertiajs/react";
 import { FormEventHandler } from "react";
 
 export default function ForgotPassword({ status }: { status?: string }) {
@@ -51,6 +51,7 @@ export default function ForgotPassword({ status }: { status?: string }) {
                     <InputError message={errors.email} className="mt-2" />
 
                     <div className="mt-4 flex items-center justify-center">
+                        
                         <PrimaryButton
                             className="ms-0 bg-red-500 hover:bg-red-300"
                             disabled={processing}
@@ -60,6 +61,15 @@ export default function ForgotPassword({ status }: { status?: string }) {
                         </PrimaryButton>
                     </div>
                 </form>
+                  {/* Vissza gomb a regisztrációs form alatt */}
+                  <div className="mt-4 flex justify-right">
+                    <Link
+                        href="/login" // Vissza a főoldalra
+                        className="inline-block bg-blue-500 hover:bg-blue-300 text-white px-4 py-2 rounded-lg shadow-md"
+                    >
+                        Vissza
+                    </Link>
+                </div>
             </div>
         </div>
     );

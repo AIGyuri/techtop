@@ -127,6 +127,8 @@ export default function Login({
                     </div>
                 </form>
 
+                
+
                   {/* Vissza gomb a regisztrációs form alatt */}
                   <div className="mt-4 flex justify-right">
                     <Link
