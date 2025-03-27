@@ -41,6 +41,14 @@ export default function Cart() {
         removeProductFromLocalStorage(id);
     }
 
+    let huf = new Intl.NumberFormat('hu-HU', {
+        style: 'currency',
+        currency: 'huf',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2,
+      })
+    
+
     return (
         <div style={{ backgroundColor: '#f4f4f9', minHeight: '100vh', padding: '2rem' }}>
             <div style={{ maxWidth: '1200px', margin: 'auto' }}>
@@ -65,7 +73,7 @@ export default function Cart() {
                                         />
                                         <div style={{ marginLeft: '1rem' }}>
                                             <h3 style={{ fontSize: '1rem', fontWeight: '500', color: '#333' }}>{cartItem.name}</h3>
-                                            <p style={{ fontSize: '0.875rem', color: '#777' }}>Ár: {cartItem.price} Ft</p>
+                                            <p style={{ fontSize: '0.875rem', color: '#777' }}>Ár: {huf.format(cartItem.price)}</p>
                                         </div>
                                     </div>
                                     {/* Mennyiség és összeg */}

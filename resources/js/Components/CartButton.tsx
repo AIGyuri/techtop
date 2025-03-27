@@ -16,9 +16,16 @@ export default function CartButton({ product }: { product: ProductCart }) {
       setCartItems(prev => [ ...prev, product ])
     }
 
+    let huf = new Intl.NumberFormat('hu-HU', {
+        style: 'currency',
+        currency: 'huf',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2,
+    })
+
     return (
         <div className="mt-4 flex items-center justify-between gap-4">
-            <p className="text-2xl font-extrabold leading-tight text-gray-900 ">{product.price} Ft</p>
+            <p className="text-2xl font-extrabold leading-tight text-gray-900 ">{huf.format(product.price)}</p>
             <button onClick={(e) => { 
               e.preventDefault();
               handleAddCartItems(product)
