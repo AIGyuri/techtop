@@ -79,7 +79,7 @@ export default function Cart() {
                                     {/* Mennyiség és összeg */}
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
                                         <span style={{ color: '#555', marginRight: '1rem' }}>Kosárba helyezett termékek darabszáma: {cartItem.quantity}</span>
-                                        <span style={{ color: '#555', marginRight: '1rem' }}>Összesen: {(cartItem.quantity * cartItem.price)} Ft</span>
+                                        <span style={{ color: '#555', marginRight: '1rem' }}>Összesen: {huf.format(cartItem.quantity * cartItem.price)}</span>
                                         <button 
                                             onClick={() => handleCartItemQuantityDecrement(cartItem.id)} 
                                             style={{ border: '1px solid #ccc', borderRadius: '4px', padding: '0.5rem', backgroundColor: '#fff' }}
@@ -108,7 +108,7 @@ export default function Cart() {
                     {/* Kosár összesítő */}
                     {cartItems.length > 0 && (
                         <div style={{ marginTop: '2rem', borderTop: '1px solid #ddd', paddingTop: '1rem', textAlign: 'right' }}>
-                            <h2 style={{ fontSize: '1.25rem', fontWeight: '600', color: '#333' }}>Összesen: {totalPrice} Ft</h2>
+                            <h2 style={{ fontSize: '1.25rem', fontWeight: '600', color: '#333' }}>Összesen: {huf.format(Number(totalPrice))}</h2>
                             <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
                                 <button onClick={() => {
                                     setCartItems([]);
