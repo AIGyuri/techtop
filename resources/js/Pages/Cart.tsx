@@ -121,7 +121,7 @@ export default function Cart() {
                                     Tovább a pénztárhoz
                                 </button> */}
 
-                               <CheckoutButton totalprice={Number(totalPrice)} />
+                               <CheckoutButton totalprice={Number(totalPrice)} setCartItems={setCartItems} />
 
                             </div>
 

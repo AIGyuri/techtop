@@ -5,9 +5,10 @@ const stripePromise = loadStripe("pk_test_51R50faECUGcDqIDT1E3Z7gerz8mJffssTFpp8
 
 interface CheckoutButtonProps{
 	totalprice: number; // Az árat, amit a kosárban találunk
+	setCartItems: (items: any[]) => void;
 }
 
-export default function CheckoutButton({ totalprice}: CheckoutButtonProps) {
+export default function CheckoutButton({ totalprice, setCartItems}: CheckoutButtonProps) {
   const [loading, setLoading] = useState(false);
 
 const handleCheckout = async () =>{
@@ -26,10 +27,12 @@ const handleCheckout = async () =>{
 
 		const data: { id: string } = await response.json();
 		const stripe = await stripePromise;
-
+		setCartItems([]);
+		localStorage.removeItem("cart");
 		if (!stripe) {
          throw new Error("Stripe betöltése sikertelen");
       }
+
 
 		await stripe.redirectToCheckout({ sessionId: data.id });
 	} catch (error) {
@@ -39,9 +42,11 @@ const handleCheckout = async () =>{
 	}
 };
 
+const formattedPrice = totalprice.toFixed(2).replace(/\.00$/, '');
+
   return (
     <button onClick={handleCheckout} disabled={loading} style={{ backgroundColor: '#2a9d8f', color: 'white', padding: '0.75rem 1.5rem', borderRadius: '8px', cursor: 'pointer', transition: 'background-color 0.3s' }}>
-		{loading ? "Betöltés..." : `Fizetés ${totalprice} Ft`}
+		{loading ? "Betöltés..." : `Fizetés ${formattedPrice} Ft`}
 	 </button>
   );
 }
