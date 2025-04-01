@@ -4,6 +4,7 @@ import { useCart } from "@/hooks/useCart";
 import { removeProductFromLocalStorage, updateProductLocalStorage } from "@/lib/utils";
 import { Link } from "@inertiajs/react";
 import { MinusIcon, PlusIcon, XIcon } from "lucide-react";
+import CheckoutButton from './../Components/CheckoutButton';
 
 export default function Cart() {
     const { cartItems, setCartItems } = useCart();
@@ -116,9 +117,12 @@ export default function Cart() {
                                 }} style={{ backgroundColor: '#e63946', color: 'white', padding: '0.75rem 1.5rem', borderRadius: '8px', cursor: 'pointer', transition: 'background-color 0.3s' }}>
                                     Kosár ürítése
                                 </button>
-                                <button style={{ backgroundColor: '#2a9d8f', color: 'white', padding: '0.75rem 1.5rem', borderRadius: '8px', cursor: 'pointer', transition: 'background-color 0.3s' }}>
+                                {/* <button style={{ backgroundColor: '#2a9d8f', color: 'white', padding: '0.75rem 1.5rem', borderRadius: '8px', cursor: 'pointer', transition: 'background-color 0.3s' }}>
                                     Tovább a pénztárhoz
-                                </button>
+                                </button> */}
+
+                               <CheckoutButton totalprice={Number(totalPrice)} />
+
                             </div>
 
                               {/* Vissza a termékekhez gomb */}
