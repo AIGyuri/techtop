@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\UserIsAdmin;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -22,31 +23,23 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 });
 
-Route::get('/brands', [BrandController::class, 'index'])->name('brands');
-
-Route::get('/products', [ProductController::class, 'index'])->name('products');
-
-Route::get('/products/{id}', [ProductController::class, 'show'])->name('product');
-
-Route::get('/users', [UserController::class, 'index'])->name('users');
-
-Route::get('/orders', [OrderController::class, 'index'])->name('orders');
-
-Route::get('/orders-items', [OrderItemController::class, 'index'])->name('orders-items');
-
-Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::middleware(UserIsAdmin::class)->group(function () {
+    Route::get('/brands', [BrandController::class, 'index'])->name('brands');
+    Route::get('/users', [UserController::class, 'index'])->name('users');
+    Route::get('/orders', [OrderController::class, 'index'])->name('orders');
+    Route::get('/orders-items', [OrderItemController::class, 'index'])->name('orders-items');
+});
 
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
-
+Route::get('/products', [ProductController::class, 'index'])->name('products');
+Route::get('/products/{id}', [ProductController::class, 'show'])->name('product');
 
 require __DIR__ . '/auth.php';
