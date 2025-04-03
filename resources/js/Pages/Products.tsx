@@ -6,12 +6,9 @@ import CartIcon from '@/Components/CartLink';
 import GuestLayout from '@/Layouts/GuestLayout';
 import { Button } from '@headlessui/react';
 import { ArrowUp } from 'lucide-react';
+import { Brand } from '@/lib/types';
 
-interface Brand {
-  id: number;
-  name: string;
-  description: string;
-}
+
 
 export default function Products({ products, brands }: { products: Product[], brands: Brand[] }) {
   const [brandFilterState, setBrandFilterState] = useState("");
@@ -96,7 +93,7 @@ export default function Products({ products, brands }: { products: Product[], br
 };
 
 
-const ProductCard = ({ product }: { product: Product }) => {
+export const ProductCard = ({ product }: { product: Product }) => {
   
 
   return (

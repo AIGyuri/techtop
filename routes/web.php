@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Middleware\UserIsAdmin;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -21,7 +22,7 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
-});
+})->name('home');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -33,9 +34,17 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(UserIsAdmin::class)->group(function () {
     Route::get('/brands', [BrandController::class, 'index'])->name('brands');
-    Route::get('/users', [UserController::class, 'index'])->name('users');
+    // Route::get('/users', [UserController::class, 'index'])->name('users');
     Route::get('/orders', [OrderController::class, 'index'])->name('orders');
     Route::get('/orders-items', [OrderItemController::class, 'index'])->name('orders-items');
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::get('/dashboard/product/create', [ProductController::class, 'create'])->name('products.create');
+    Route::post('/dashboard/product', [ProductController::class, 'store'])->name('products.store');
+    Route::get('/dashboard/product/{id}', [ProductController::class, 'edit'])->name('edit');
+    Route::put('/dashboard/product/{id}', [ProductController::class, 'update'])->name('products.update');
+    Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('destroy');
 });
 
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
