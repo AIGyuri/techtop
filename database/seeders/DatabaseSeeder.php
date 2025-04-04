@@ -10,6 +10,7 @@ use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Product;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,12 +19,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->create();
+        // User::factory(10)->create();
 
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        User::factory()->create([
+            'name' => 'Pántya Petra',
+            'email' => 'pantyapetra16@gmail.com',
+            'is_admin' => true,
+            'password' => Hash::make('Passw123'),
+        ]);
+
+        User::factory()->create([
+            'name' => 'Szabó György',
+            'email' => 'aigyuri@gmail.com',
+            'is_admin' => true,
+            'password' => Hash::make('Passw123'),
+        ]);
 
         $brands = [
             [

@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string("name");
             $table->text("description");
             $table->integer("price");
-            $table->string("image");
+            $table->string("image")->nullable();
             $table->integer("stock_quantity");
-            $table->foreignId("brand_id")->constrained();
-            $table->dateTime("created_at");
+            $table->foreignId("brand_id")->constrained()->onDelete('cascade');
+            $table->dateTime("created_at")->useCurrent();
         });
     }
 
