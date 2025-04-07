@@ -58,7 +58,7 @@ class StripePaymentController extends Controller
             ],
             'mode' => 'payment',
             'success_url' => env('APP_URL') . '/products',
-            'cancel_url' => env('APP_URL') . '/cancel',
+            'cancel_url' => env('APP_URL') . '/products',
         ]);
 
         return response()->json(['id' => $session->id]);
