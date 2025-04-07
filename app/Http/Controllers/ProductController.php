@@ -65,7 +65,7 @@ class ProductController extends Controller
 
     public function edit($id) 
     {
-        $product = Product::find($id);
+        $product = Product::with('brand')->find($id);
         
         if (!$product) {
             return back()->with([ "error" => "Nem található ilyen termék" ]);
@@ -89,7 +89,8 @@ class ProductController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'price' => 'required|numeric|min:0',
-            'description' => 'string'
+            'description' => 'string',
+            'stock_quantity' => 'required|integer'
         ]);
         
         $product->update($validated);

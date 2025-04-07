@@ -30,6 +30,7 @@
         "vitest": "^3.1.1"
     },
     "dependencies": {
+        "@stripe/stripe-js": "^7.0.0",
         "lucide-react": "^0.479.0",
         "react-router": "^7.1.5",
         "react-router-dom": "^7.3.0"

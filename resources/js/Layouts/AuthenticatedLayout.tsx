@@ -29,10 +29,22 @@ export default function Authenticated({
 
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink
+                                    href={route('home')}
+                                    active={route().current('home')}
+                                >
+                                    Kezdőlap
+                                </NavLink>
+                                <NavLink
                                     href={route('dashboard')}
                                     active={route().current('dashboard')}
                                 >
                                     Irányítópult
+                                </NavLink>
+                                <NavLink
+                                    href={route('dashboard.reviews')}
+                                    active={route().current('dashboard.reviews')}
+                                >
+                                    Vélemények
                                 </NavLink>
                             </div>
                         </div>
@@ -133,10 +145,22 @@ export default function Authenticated({
                 >
                     <div className="space-y-1 pb-3 pt-2">
                         <ResponsiveNavLink
+                            href={route('home')}
+                            active={route().current('home')}
+                        >
+                            Kezdőlap
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
                             href={route('dashboard')}
                             active={route().current('dashboard')}
                         >
                             Irányítópult
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            href={route('dashboard.reviews')}
+                            active={route().current('dashboad.reviews')}
+                        >
+                            Vélemények
                         </ResponsiveNavLink>
                     </div>
 

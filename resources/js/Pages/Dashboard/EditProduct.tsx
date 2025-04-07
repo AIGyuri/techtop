@@ -21,7 +21,8 @@ export default function ProductShow({ product }: { product: Product }) {
     const { data, setData, put, processing, errors } = useForm({
         name: product.name,
         price: product.price,
-        description: product.description || ''
+        description: product.description || '',
+        stock_quantity: product.stock_quantity || 0,
     });
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -59,6 +60,8 @@ export default function ProductShow({ product }: { product: Product }) {
                     {product.description && (
                         <p className="text-gray-700">{product.description}</p>
                     )}
+                    <p>Mennyiség: {product.stock_quantity} db</p>
+                    <p>Márka: {product.brand.name}</p>
                 </div>
                 <div className="bg-white shadow-md rounded-lg p-6">
                     <h2 className="text-xl font-semibold mb-4">Update Product</h2>
@@ -101,6 +104,18 @@ export default function ProductShow({ product }: { product: Product }) {
                                 onChange={(e) => setData('description', e.target.value)}
                                 className="w-full px-3 py-2 border rounded-md"
                                 rows={4}
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label className="block text-gray-700 mb-2" htmlFor="quantity">
+                                Mennyiség
+                            </label>
+                            <input
+                                id="quantity"
+                                type='number'
+                                value={data.stock_quantity}
+                                onChange={(e) => setData('stock_quantity', Number(e.target.value))}
+                                className="w-full px-3 py-2 border rounded-md"
                             />
                         </div>
                         <button

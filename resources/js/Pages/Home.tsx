@@ -44,7 +44,7 @@ export default function Home() {
             Miért válassz minket?
           </h2>
           <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto font-medium">
-            Mi nem csak laptopokat árulunk. Mi a minőség, gyorsaság és vásárlói élmény iránti elkötelezettségünket kínáljuk. Garantáltan megtalálod a legjobb ajánlatokat és a legújabb technológiát!
+            Mi a minőség, gyorsaság és vásárlói élmény iránti elkötelezettségünket kínáljuk. Garantáltan megtalálod a legjobb ajánlatokat és a legújabb technológiát!
           </p>
           <Link
             href="/products"

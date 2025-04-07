@@ -4,7 +4,8 @@ import PrimaryButton from "@/Components/PrimaryButton";
 import TextInput from "@/Components/TextInput";
 import GuestLayout from "@/Layouts/GuestLayout";
 import { Head, Link, useForm } from "@inertiajs/react";
-import { FormEventHandler } from "react";
+import { Eye, EyeOff } from "lucide-react";
+import { FormEventHandler, useState } from "react";
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -13,6 +14,8 @@ export default function Register() {
         password: "",
         password_confirmation: "",
     });
+
+    const [showPassword, setShowPassword] = useState(false);
 
     const submit: FormEventHandler = (e) => {
         e.preventDefault();
@@ -70,19 +73,33 @@ export default function Register() {
                     <div className="mt-4">
                         <InputLabel htmlFor="password" />
 
-                        <TextInput
-                            id="password"
-                            type="password"
-                            name="password"
-                            placeholder="Jelszó"
-                            value={data.password}
-                            className="mt-1 block w-full"
-                            autoComplete="new-password"
-                            onChange={(e) =>
-                                setData("password", e.target.value)
-                            }
-                            required
-                        />
+                        <div className="relative">
+                            <TextInput
+                                id="password"
+                                type={showPassword ? "text" : "password"}
+                                name="password"
+                                placeholder="Jelszó"
+                                value={data.password}
+                                className="mt-1 block w-full"
+                                autoComplete="new-password"
+                                onChange={(e) =>
+                                    setData("password", e.target.value)
+                                }
+                                required
+                            />
+
+                            <button
+                                type="button"
+                                onClick={() => setShowPassword(!showPassword)} // Kattintásra változik a láthatóság
+                                className="absolute inset-y-0 right-1 flex items-center pr-3"
+                            >
+                                {showPassword ? (
+                                    <Eye className="w-4 h-4" />
+                                ) : (
+                                    <EyeOff className="w-4 h-4" />
+                                )}
+                            </button>
+                        </div>
 
                         <InputError
                             message={errors.password}
@@ -98,7 +115,7 @@ export default function Register() {
 
                         <TextInput
                             id="password_confirmation"
-                            type="password"
+                            type={showPassword ? "text" : "password"}
                             name="password_confirmation"
                             placeholder="Jelszó megerésítése"
                             value={data.password_confirmation}

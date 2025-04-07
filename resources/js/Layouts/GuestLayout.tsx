@@ -1,15 +1,35 @@
 // import ApplicationLogo from '@/Components/ApplicationLogo';
-import { Link } from '@inertiajs/react';
+import { Link, usePage } from '@inertiajs/react';
 import { PropsWithChildren, useState } from 'react';
 import LOGO from '../Logo/techtoplogo.png';
 // import LoginIcon from '@/Components/LoginLink';
-import { UserPlus, UserRoundIcon } from 'lucide-react';
+import { LayoutDashboard, LogOutIcon, UserPlus, UserRoundIcon } from 'lucide-react';
 
 export default function Guest({ children }: PropsWithChildren) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+    const { auth } = usePage().props;
+    const isCookieAccepted = localStorage.getItem('cookie') === 'true';
     
     return (
-        <div className="">
+        <div className="relative">
+            {!isCookieAccepted && (
+                <div className='fixed right-5 bottom-5 border border-gray-400 p-4 rounded-lg bg-white z-50'>
+                    <h2>A weboldalunk sütiket használ a gördülékeny működéshez.</h2>
+                    <div className='w-max ml-auto mt-4'>
+                        <button onClick={
+                            () => {
+                                localStorage.setItem('cookie', 'true');
+                                window.location.reload();
+                            }
+                            }
+                            className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md'
+                        >
+                            Elfogadás
+                        </button>
+                    </div>
+                </div>
+            )}
+
             <nav className="bg-blue-400 antialiased">
                 <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0 py-4">
                     <div className="flex items-center justify-between">
@@ -28,7 +48,7 @@ export default function Guest({ children }: PropsWithChildren) {
                                         href="/"
                                         className="flex text-sm font-medium text-gray-900 hover:text-primary-700"
                                     >
-                                        Home
+                                        Kezdőlap
                                     </Link>
                                 </li>
                                 <li className="shrink-0">
@@ -36,23 +56,7 @@ export default function Guest({ children }: PropsWithChildren) {
                                         href="/products"
                                         className="flex text-sm font-medium text-gray-900 hover:text-primary-700"
                                     >
-                                        Products
-                                    </Link>
-                                </li>
-                                <li className="shrink-0">
-                                    <Link
-                                        href="#"
-                                        className="flex text-sm font-medium text-gray-900 hover:text-primary-700"
-                                    >
-                                        Box3
-                                    </Link>
-                                </li>
-                                <li className="shrink-0">
-                                    <Link
-                                        href="#"
-                                        className="text-sm font-medium text-gray-900 hover:text-primary-700"
-                                    >
-                                        Box4
+                                        Termékek
                                     </Link>
                                 </li>
                                 <li className="shrink-0">
@@ -60,35 +64,85 @@ export default function Guest({ children }: PropsWithChildren) {
                                         href="/about"
                                         className="text-sm font-medium text-gray-900 hover:text-primary-700"
                                     >
-                                        About
+                                        Rólunk
+                                    </Link>
+                                </li>
+                                <li className="shrink-0">
+                                    <Link
+                                        href="/contact"
+                                        className="text-sm font-medium text-gray-900 hover:text-primary-700"
+                                    >
+                                        Kapcsolat
                                     </Link>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="flex items-center lg:space-x-2 relative">
-                            <div className="relative">
-                                <Link
-                                    href="/register"
-                                    id="handleRegisterRedirect"
-                                    className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
-                                >
-                                    <UserPlus className='w-5 h-4' />
-                                    Register
-                                </Link>
-                            </div>
+                            {!auth.user ? (
+                                <div className='flex items-center gap-2'>
+                                    <div className="relative">
+                                        <Link
+                                            href="/register"
+                                            id="handleRegisterRedirect"
+                                            className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
+                                        >
+                                            <UserPlus className='w-4 h-4 mr-2' />
+                                            Register
+                                        </Link>
+                                    </div>
 
-                            <div className="relative">
-                                <Link
-                                    href="/login"
-                                    id="userDropdownButton1"
-                                    className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
-                                >
-                                    {/* <LoginIcon /> */}
-                                    <UserRoundIcon className='w-4 h-4' />
-                                    Login
-                                </Link>
-                            </div>
+                                    <div className="relative">
+                                        <Link
+                                            href="/login"
+                                            id="userDropdownButton1"
+                                            className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
+                                        >
+                                            {/* <LoginIcon /> */}
+                                            <UserRoundIcon className='w-4 h-4 mr-2' />
+                                            Login
+                                        </Link>
+                                    </div>
+                                </div>
+                            ) : (
+                                auth.user.is_admin === 1 ? (
+                                    <div className="relative flex items-center gap-2">
+                                        <Link
+                                            href={route('dashboard')}
+                                            className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
+                                        >
+                                            <LayoutDashboard className='w-4 h-4 mr-2' />
+                                            Irányítópult
+                                        </Link>
+                                        <Link
+                                            className='inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900'
+                                            href={route('logout')}
+                                            method="post"
+                                        >
+                                            <LogOutIcon className='w-4 h-4 mr-2' />
+                                            Kijelentkezés
+                                        </Link>
+                                    </div>
+                                ) : (
+                                    <div className="relative flex items-center gap-2">
+                                        <Link
+                                            href={route('profile.edit')}
+                                            className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
+                                        >
+                                            <UserRoundIcon className='w-4 h-4 mr-2' />
+                                            Profil
+                                        </Link>
+                                        <Link
+                                            className='inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900'
+                                            href={route('logout')}
+                                            method="post"
+                                        >
+                                            <LogOutIcon className='w-4 h-4 mr-2' />
+                                            Kijelentkezés
+                                        </Link>
+                                    </div>
+                                )
+                            )}
                             <button
                                 type="button"
                                 data-collapse-toggle="ecommerce-navbar-menu-1"
@@ -125,28 +179,23 @@ export default function Guest({ children }: PropsWithChildren) {
                         >
                             <ul className="text-gray-900 text-sm font-medium space-y-3">
                                 <li>
-                                    <Link href="#" className="hover:text-primary-700">
-                                        Home
+                                    <Link href="/" className="hover:text-primary-700">
+                                        Kezdőlap
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="hover:text-primary-700">
-                                        About
+                                    <Link href="/about" className="hover:text-primary-700">
+                                        Rólunk
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="/products" className="hover:text-primary-700">
-                                        Products
+                                        Termékek
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="#" className="hover:text-primary-700">
-                                        Box3
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="hover:text-primary-700">
-                                        Box4
+                                    <Link href="/contact" className="hover:text-primary-700">
+                                        Kapcsolat
                                     </Link>
                                 </li>
                             </ul>

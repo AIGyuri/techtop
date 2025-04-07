@@ -1,11 +1,12 @@
+import { useState } from "react";
 import Checkbox from "@/Components/Checkbox";
 import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import PrimaryButton from "@/Components/PrimaryButton";
 import TextInput from "@/Components/TextInput";
-
 import { Head, Link, useForm } from "@inertiajs/react";
 import { FormEventHandler } from "react";
+import { Eye, EyeOff } from "lucide-react";
 
 export default function Login({
     status,
@@ -20,9 +21,10 @@ export default function Login({
         remember: false as boolean,
     });
 
+    const [showPassword, setShowPassword] = useState(false);
+
     const submit: FormEventHandler = (e) => {
         e.preventDefault();
-
         post(route("login"), {
             onFinish: () => reset("password"),
         });
@@ -59,11 +61,7 @@ export default function Login({
                         />
 
                         <InputError
-                            message={
-                                errors.email
-                                    ? "Kérlek add meg az email címed"
-                                    : ""
-                            }
+                            message={errors.email ? "Hibás email cím vagy jelszó" : ""}
                             className="mt-2"
                         />
                     </div>
@@ -71,25 +69,33 @@ export default function Login({
                     <div className="mt-4">
                         <InputLabel htmlFor="password" />
 
-                        <TextInput
-                            id="password"
-                            type="password"
-                            name="password"
-                            placeholder="jelszó"
-                            value={data.password}
-                            className="mt-1 block w-full"
-                            autoComplete="current-password"
-                            onChange={(e) =>
-                                setData("password", e.target.value)
-                            }
-                        />
+                        <div className="relative">
+                            <TextInput
+                                id="password"
+                                type={showPassword ? "text" : "password"} // Ha a jelszó látható, akkor "text", ha nem, akkor "password"
+                                name="password"
+                                placeholder="jelszó"
+                                value={data.password}
+                                className="mt-1 block w-full pr-10" // pr-10, hogy legyen hely a szem ikon számára
+                                autoComplete="current-password"
+                                onChange={(e) => setData("password", e.target.value)}
+                            />
+
+                            <button
+                                type="button"
+                                onClick={() => setShowPassword(!showPassword)} // Kattintásra változik a láthatóság
+                                className="absolute inset-y-0 right-1 flex items-center pr-3"
+                            >
+                                {showPassword ? (
+                                    <Eye className="w-4 h-4" />
+                                ) : (
+                                    <EyeOff className="w-4 h-4" />
+                                )}
+                            </button>
+                        </div>
 
                         <InputError
-                            message={
-                                errors.password
-                                    ? "Kérlek add meg a jelszavad"
-                                    : ""
-                            }
+                            message={errors.password ? "Kérlek add meg a jelszavad" : ""}
                             className="mt-2"
                         />
                     </div>
@@ -100,10 +106,7 @@ export default function Login({
                                 name="remember"
                                 checked={data.remember}
                                 onChange={(e) =>
-                                    setData(
-                                        "remember",
-                                        (e.target.checked || false) as false
-                                    )
+                                    setData("remember", e.target.checked)
                                 }
                             />
                             <span className="ms-2 text-sm text-gray-600">
@@ -127,10 +130,8 @@ export default function Login({
                     </div>
                 </form>
 
-                
-
-                  {/* Vissza gomb a regisztrációs form alatt */}
-                  <div className="mt-4 flex justify-right">
+                {/* Vissza gomb a regisztrációs form alatt */}
+                <div className="mt-4 flex justify-right">
                     <Link
                         href="/" // Vissza a főoldalra
                         className="inline-block bg-blue-500 hover:bg-blue-300 text-white px-4 py-2 rounded-lg shadow-md"

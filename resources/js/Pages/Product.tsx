@@ -7,8 +7,6 @@ import CartIcon from '@/Components/CartLink';
 
 const ProductListing = ({ product }: { product: Product }) => {
 
-    console.log(product.image)
-
     return (
 
         <main className='w-full'>

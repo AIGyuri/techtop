@@ -10,6 +10,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Middleware\UserIsAdmin;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -45,10 +46,16 @@ Route::middleware(UserIsAdmin::class)->group(function () {
     Route::get('/dashboard/product/{id}', [ProductController::class, 'edit'])->name('edit');
     Route::put('/dashboard/product/{id}', [ProductController::class, 'update'])->name('products.update');
     Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('destroy');
+
+    Route::get('/dashboard/reviews', [ReviewController::class, 'index'])->name('dashboard.reviews');
 });
 
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 Route::get('/products', [ProductController::class, 'index'])->name('products');
 Route::get('/products/{id}', [ProductController::class, 'show'])->name('product');
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+})->name('contact');
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 require __DIR__ . '/auth.php';
