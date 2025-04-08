@@ -30,7 +30,7 @@ export default function CartButton({ product }: { product: ProductCart }) {
               e.preventDefault();
               handleAddCartItems(product)
               addProductToLocalStorage({ ...product, quantity: 1 });
-            }} className="inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300">
+            }} className="inline-flex items-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300">
               Kosárba
             </button>
       
