@@ -65,7 +65,7 @@ export default function About() {
                             <div className="mt-10 bg-blue-100 p-4 rounded-xl">
                                 <h3 className="text-xl font-semibold text-gray-700">Elérhetőség</h3>
                                 <p className="text-gray-600">Teljes név: Szabó György</p>
-                                <p className="text-gray-600">E-mail: gyuri@example.com</p>
+                                <p className="text-gray-600">E-mail: gyorgyszabo0421@gmail.com</p>
                                 <p className="text-gray-600">Telefonszám: +36 30 987 6543</p>
                             </div>
                         </div>
