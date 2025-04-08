@@ -43,7 +43,8 @@ export default function Login({
 
                 <form onSubmit={submit}>
                     <div>
-                        <h2 className="text-center text-3xl font-bold bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-300 bg-clip-text text-transparent mb-4">
+                        {/* Főcím nagyobb betűkkel */}
+                        <h2 className="text-center text-4xl font-extrabold bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-300 bg-clip-text text-transparent mb-6">
                             Bejelentkezés
                         </h2>
                         <InputLabel htmlFor="email" />
@@ -72,18 +73,18 @@ export default function Login({
                         <div className="relative">
                             <TextInput
                                 id="password"
-                                type={showPassword ? "text" : "password"} // Ha a jelszó látható, akkor "text", ha nem, akkor "password"
+                                type={showPassword ? "text" : "password"}
                                 name="password"
                                 placeholder="jelszó"
                                 value={data.password}
-                                className="mt-1 block w-full pr-10" // pr-10, hogy legyen hely a szem ikon számára
+                                className="mt-1 block w-full pr-10"
                                 autoComplete="current-password"
                                 onChange={(e) => setData("password", e.target.value)}
                             />
 
                             <button
                                 type="button"
-                                onClick={() => setShowPassword(!showPassword)} // Kattintásra változik a láthatóság
+                                onClick={() => setShowPassword(!showPassword)}
                                 className="absolute inset-y-0 right-1 flex items-center pr-3"
                             >
                                 {showPassword ? (
@@ -115,7 +116,7 @@ export default function Login({
                         </label>
                     </div>
 
-                    <div className="mt-4 flex items-center justify-end">
+                    <div className="mt-6 flex items-center justify-end">
                         {canResetPassword && (
                             <Link
                                 href={route("password.request")}
@@ -124,17 +125,25 @@ export default function Login({
                                 Elfelejtette a jelszót?
                             </Link>
                         )}
-                        <PrimaryButton className="ms-4" disabled={processing}>
+                        {/* Nagyobb Bejelentkezés gomb */}
+                        <PrimaryButton className="ms-4 px-6 py-3 text-lg font-semibold" disabled={processing}>
                             Bejelentkezés
                         </PrimaryButton>
                     </div>
                 </form>
 
                 {/* Vissza gomb a regisztrációs form alatt */}
-                <div className="mt-4 flex justify-right">
+                <div className="mt-6 flex justify-end space-x-4">
                     <Link
-                        href="/" // Vissza a főoldalra
-                        className="inline-block bg-blue-500 hover:bg-blue-300 text-white px-4 py-2 rounded-lg shadow-md"
+                        href="/register"
+                        className="inline-block bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-500 text-white px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-all duration-300 ease-in-out transform text-center font-semibold"
+                    >
+                        Új profil létrehozása
+                    </Link>
+
+                    <Link
+                        href="/"
+                        className="inline-block bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-500 text-white px-4 py-2 rounded-xl shadow-md hover:scale-105 transition-all duration-300 ease-in-out text-center"
                     >
                         Vissza
                     </Link>

@@ -2,7 +2,6 @@ import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import PrimaryButton from "@/Components/PrimaryButton";
 import TextInput from "@/Components/TextInput";
-import GuestLayout from "@/Layouts/GuestLayout";
 import { Head, Link, useForm } from "@inertiajs/react";
 import { Eye, EyeOff } from "lucide-react";
 import { FormEventHandler, useState } from "react";
@@ -29,13 +28,15 @@ export default function Register() {
         <div className="flex min-h-screen flex-col items-center bg-gray-50 pt-6 sm:justify-center sm:pt-0">
             <div className="mt-6 w-full overflow-hidden bg-white px-6 py-4 shadow-md sm:max-w-md sm:rounded-lg">
                 <Head title="Register" />
-                <h2 className="text-center text-3xl font-bold bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-300 bg-clip-text text-transparent mb-4">
+                {/* Főcím nagyobb betűkkel */}
+                <h2 className="text-center text-4xl font-extrabold bg-gradient-to-r from-blue-950 via-blue-500 to-indigo-300 bg-clip-text text-transparent mb-6">
                     Regisztráció
                 </h2>
 
                 <form onSubmit={submit}>
+                    {/* Név mező */}
                     <div>
-                        <InputLabel htmlFor="name"  />
+                        <InputLabel htmlFor="name" />
 
                         <TextInput
                             id="name"
@@ -52,8 +53,9 @@ export default function Register() {
                         <InputError message={errors.name} className="mt-2" />
                     </div>
 
+                    {/* E-mail mező */}
                     <div className="mt-4">
-                        <InputLabel htmlFor="email"/>
+                        <InputLabel htmlFor="email" />
 
                         <TextInput
                             id="email"
@@ -70,6 +72,7 @@ export default function Register() {
                         <InputError message={errors.email} className="mt-2" />
                     </div>
 
+                    {/* Jelszó mező */}
                     <div className="mt-4">
                         <InputLabel htmlFor="password" />
 
@@ -80,7 +83,7 @@ export default function Register() {
                                 name="password"
                                 placeholder="Jelszó"
                                 value={data.password}
-                                className="mt-1 block w-full"
+                                className="mt-1 block w-full pr-10"
                                 autoComplete="new-password"
                                 onChange={(e) =>
                                     setData("password", e.target.value)
@@ -90,7 +93,7 @@ export default function Register() {
 
                             <button
                                 type="button"
-                                onClick={() => setShowPassword(!showPassword)} // Kattintásra változik a láthatóság
+                                onClick={() => setShowPassword(!showPassword)}
                                 className="absolute inset-y-0 right-1 flex items-center pr-3"
                             >
                                 {showPassword ? (
@@ -101,25 +104,20 @@ export default function Register() {
                             </button>
                         </div>
 
-                        <InputError
-                            message={errors.password}
-                            className="mt-2"
-                        />
+                        <InputError message={errors.password} className="mt-2" />
                     </div>
 
+                    {/* Jelszó megerősítése mező */}
                     <div className="mt-4">
-                        <InputLabel
-                            htmlFor="password_confirmation"
-                            
-                        />
+                        <InputLabel htmlFor="password_confirmation" />
 
                         <TextInput
                             id="password_confirmation"
                             type={showPassword ? "text" : "password"}
                             name="password_confirmation"
-                            placeholder="Jelszó megerésítése"
+                            placeholder="Jelszó megerősítése"
                             value={data.password_confirmation}
-                            className="mt-1 block w-full"
+                            className="mt-1 block w-full pr-10"
                             autoComplete="new-password"
                             onChange={(e) =>
                                 setData("password_confirmation", e.target.value)
@@ -133,16 +131,18 @@ export default function Register() {
                         />
                     </div>
 
-                    <div className="mt-4 flex items-center justify-end">
+                    <div className="mt-6 flex items-center justify-end">
+                        {/* Link a bejelentkezéshez */}
                         <Link
                             href={route("login")}
                             className="rounded-md text-sm text-blue-600 underline hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         >
-                            Regisztráltál már?
+                            Már regisztráltál?
                         </Link>
 
+                        {/* Regisztráció gomb nagyobb méretben */}
                         <PrimaryButton
-                            className="ms-4 bg-blue-500 hover:bg-blue-300"
+                            className="ms-4 px-6 py-3 text-lg font-semibold bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-500 hover:bg-blue-300"
                             disabled={processing}
                         >
                             Regisztráció
@@ -150,11 +150,11 @@ export default function Register() {
                     </div>
                 </form>
 
-                  {/* Vissza gomb a regisztrációs form alatt */}
-                <div className="mt-4 flex justify-right">
+                {/* Vissza gomb a regisztrációs form alatt */}
+                <div className="mt-6 flex justify-end space-x-4">
                     <Link
-                        href="/" // Vissza a főoldalra
-                        className="inline-block bg-blue-500 hover:bg-blue-300 text-white px-4 py-2 rounded-lg shadow-md"
+                        href="/"
+                        className="inline-block bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-500 text-white px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-all duration-300 ease-in-out transform text-center font-semibold"
                     >
                         Vissza
                     </Link>
