@@ -23,7 +23,7 @@ const ProductListing = ({ product }: { product: Product }) => {
             <div>
                 <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm flex items-center justify-center">
                     <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                        <div className="h-80 w-full">
+                        <div className="sm:h-80 w-full">
                             <img className="mx-auto h-full" src={`/${product.image}`} alt={product.image} />
                         </div>
                         <div className="pt-6">
