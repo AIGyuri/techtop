@@ -34,18 +34,22 @@ export default function Authenticated({
                                 >
                                     Kezdőlap
                                 </NavLink>
-                                <NavLink
-                                    href={route('dashboard')}
-                                    active={route().current('dashboard')}
-                                >
-                                    Irányítópult
-                                </NavLink>
-                                <NavLink
-                                    href={route('dashboard.reviews')}
-                                    active={route().current('dashboard.reviews')}
-                                >
-                                    Vélemények
-                                </NavLink>
+                                {user.is_admin === 1 && (
+                                    <>
+                                        <NavLink
+                                        href={route('dashboard')}
+                                        active={route().current('dashboard')}
+                                        >
+                                            Irányítópult
+                                        </NavLink>
+                                        <NavLink
+                                            href={route('dashboard.reviews')}
+                                            active={route().current('dashboard.reviews')}
+                                        >
+                                            Vélemények
+                                        </NavLink>
+                                    </>
+                                )}
                             </div>
                         </div>
 
@@ -150,18 +154,22 @@ export default function Authenticated({
                         >
                             Kezdőlap
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink
-                            href={route('dashboard')}
-                            active={route().current('dashboard')}
-                        >
-                            Irányítópult
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink
-                            href={route('dashboard.reviews')}
-                            active={route().current('dashboad.reviews')}
-                        >
-                            Vélemények
-                        </ResponsiveNavLink>
+                        {user.is_admin === 1 && (
+                            <>
+                                <ResponsiveNavLink
+                                    href={route('dashboard')}
+                                    active={route().current('dashboard')}
+                                >
+                                    Irányítópult
+                                </ResponsiveNavLink>
+                                <ResponsiveNavLink
+                                    href={route('dashboard.reviews')}
+                                    active={route().current('dashboad.reviews')}
+                                >
+                                    Vélemények
+                                </ResponsiveNavLink>
+                            </>
+                        )}
                     </div>
 
                     <div className="border-t border-gray-200 pb-1 pt-4">
@@ -196,13 +204,15 @@ export default function Authenticated({
                         <div>
                             {header}
                         </div>
-                        <div>
-                            <Link href="/dashboard/product/create">
-                                <button className='flex items-center gap-2 border border-green-600 text-green-600 hover:bg-green-600/30 py-2 px-3 rounded-md'>
-                                    Új termék <Plus className='w-4 h-4' />
-                                </button>
-                            </Link>
-                        </div>
+                        {user.is_admin === 1 && (
+                            <div>
+                                <Link href="/dashboard/product/create">
+                                    <button className='flex items-center gap-2 border border-blue-600 text-blue-600 hover:bg-blue-600/30 py-2 px-3 rounded-md'>
+                                        Új termék <Plus className='w-4 h-4' />
+                                    </button>
+                                </Link>
+                            </div>
+                        )}
                     </div>
                 </header>
             )}

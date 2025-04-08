@@ -24,7 +24,7 @@ const ProductListing = ({ product }: { product: Product }) => {
                 <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm flex items-center justify-center">
                     <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
                         <div className="h-80 w-full">
-                            <img className="mx-auto h-full" src={`/storage/${product.image}`} alt={product.image} />
+                            <img className="mx-auto h-full" src={`/${product.image}`} alt={product.image} />
                         </div>
                         <div className="pt-6">
                             <div className="mb-4 flex items-center justify-between gap-4">
@@ -52,16 +52,6 @@ const ProductListing = ({ product }: { product: Product }) => {
                             </Link>
                         </div>
                     </div>
-
-
-
-                    {/* <img src={product.image} alt={product.name} className="product-image" />
-            <div className="product-details">
-                <h1 className="product-name">{product.name}</h1>
-                <p className="product-description">{product.description}</p>
-                <p className="product-price">{product.price} Ft</p>
-                <button className="order-button">Megrendelés</button>
-            </div> */}
                 </div>
             </div>
         </main>

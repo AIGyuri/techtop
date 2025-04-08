@@ -19,8 +19,8 @@ export default function Home() {
       <div className="bg-blue-50 min-h-screen">
 
         {/* Fő szakasz - nagyobb kék háttér */}
-        <section className="text-center py-24 bg-gradient-to-r from-blue-500 to-blue-400 text-white rounded-b-3xl shadow-lg">
-          <h1 className="text-5xl font-extrabold mb-6 tracking-tight leading-tight text-shadow-md">
+        <section className="text-center py-24 bg-gradient-to-r from-blue-400 to-blue-400 text-white rounded-b-3xl shadow-lg">
+          <h1 className="text-6xl font-extrabold mb-6 tracking-tight leading-tight text-shadow-md">
             Üdvözlünk a Webshopunkban!
           </h1>
           <p className="text-xl mb-12 max-w-2xl mx-auto font-medium">
