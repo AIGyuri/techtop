@@ -142,7 +142,7 @@ export default function Register() {
 
                         {/* Regisztráció gomb nagyobb méretben */}
                         <PrimaryButton
-                            className="ms-4 px-6 py-3 text-lg font-semibold bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-500 hover:bg-blue-300"
+                            className="ms-4 px-6 py-3 text-lg font-semibold"
                             disabled={processing}
                         >
                             Regisztráció

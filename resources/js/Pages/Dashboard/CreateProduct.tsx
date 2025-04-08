@@ -26,7 +26,7 @@ export default function CreateProduct({ brands }: { brands: Brand[]  }) {
         <AuthenticatedLayout>
             <div className="max-w-2xl mx-auto p-6">
                 <Head title="Create New Product" />
-                <h1 className="text-2xl font-bold mb-6">Új termék készítése</h1>
+                <h1 className="text-2xl sm:text-3xl font-bold mb-6">Új termék készítése</h1>
                 <div className="bg-white shadow-md rounded-lg p-6">
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4">
