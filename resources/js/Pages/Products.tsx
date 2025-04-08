@@ -60,18 +60,18 @@ export default function Products({ products, brands }: { products: Product[], br
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
           {/* Fejléc és szűrők */}
           <div className="mb-4 items-end justify-end space-y-4 sm:flex sm:space-y-0 md:mb-8">
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-col-reverse gap-3 md:gap-0 md:flex-row items-center space-x-4">
               <CartIcon />
-              <select name="filter" id="filter" value={filterState} onChange={(e) => setFilterState(e.target.value)}>
-                <option value="">Rendezés</option>
-                <option value="asc">Ár szerint növekvő</option>
-                <option value="desc">Ár szerint csökkenő</option>
-              </select>
               <select name="brandFilter" id="brandFilter" onChange={(e) => setBrandFilterState(e.target.value)}>
                 <option value="">Összes</option>
                 {brands.map((brand) => (
                   <option key={brand.id} value={brand.name}>{brand.name}</option>
                 ))}
+              </select>
+              <select name="filter" id="filter" value={filterState} onChange={(e) => setFilterState(e.target.value)}>
+                <option value="">Rendezés</option>
+                <option value="asc">Ár szerint növekvő</option>
+                <option value="desc">Ár szerint csökkenő</option>
               </select>
               {/* Rendezés dropdown */}
             </div>

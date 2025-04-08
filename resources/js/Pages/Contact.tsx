@@ -60,23 +60,23 @@ export default function Contact() {
                     </>
                 )}
 
-                <div className="mt-16 w-full overflow-hidden bg-white px-6 py-8 shadow-md sm:max-w-md sm:rounded-lg">
-                    <h2 className="text-center text-5xl font-bold text-blue-500 mb-4">Kapcsolat</h2>
+                <div className="mt-16 w-full max-w-lg overflow-hidden bg-white px-6 py-8 shadow-md sm:rounded-lg">
+                    <h2 className="text-center text-3xl sm:text-4xl font-bold text-blue-500 mb-4">Kapcsolat</h2>
 
                     {/* Elérhetőségek */}
                     <div className="mt-8 text-center">
-                        <h3 className="text-lg font-semibold text-gray-700">Elérhetőségek</h3>
-                        <p className="mt-2 text-sm text-gray-500">Telefon: +36 30 123 4567</p>
-                        <p className="mt-2 text-sm text-gray-500">Email: <a href="mailto:info@techtop.hu" className="text-blue-600">info@techtop.hu</a></p>
-                        <p className="mt-2 text-sm text-gray-500">Cím: 1234 Budapest, TechTop utca 1.</p>
+                        <h3 className="text-lg sm:text-xl font-semibold text-gray-700">Elérhetőségek</h3>
+                        <p className="mt-2 text-sm sm:text-base text-gray-500">Telefon: +36 30 123 4567</p>
+                        <p className="mt-2 text-sm sm:text-base text-gray-500">Email: <a href="mailto:info@techtop.hu" className="text-blue-600">info@techtop.hu</a></p>
+                        <p className="mt-2 text-sm sm:text-base text-gray-500">Cím: 1234 Budapest, TechTop utca 1.</p>
                     </div>
 
                     {/* Véleményező mező */}
                     <div className="mt-8">
-                        <h3 className="text-3xl font-semibold text-blue-500 text-center mb-4">Véleményed megosztása</h3>
+                        <h3 className="text-2xl sm:text-3xl font-semibold text-blue-500 text-center mb-4">Véleményed megosztása</h3>
                         <form onSubmit={handleReviewSubmit}>
                             <div className="mb-4">
-                                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="name" className="block text-sm sm:text-base font-medium text-gray-700">
                                     Név
                                 </label>
                                 <input
@@ -93,7 +93,7 @@ export default function Contact() {
                             </div>
 
                             <div className="mb-4">
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="email" className="block text-sm sm:text-base font-medium text-gray-700">
                                     Email
                                 </label>
                                 <input
@@ -110,7 +110,7 @@ export default function Contact() {
                             </div>
 
                             <div className="mb-4">
-                                <label htmlFor="review" className="block text-sm font-medium text-gray-700">
+                                <label htmlFor="review" className="block text-sm sm:text-base font-medium text-gray-700">
                                     Vélemény
                                 </label>
                                 <textarea

@@ -22,7 +22,7 @@ export default function Dashboard({ products }: { products: Product[] }) {
     return (
         <AuthenticatedLayout
             header={
-                <h2 className="text-xl font-semibold leading-tight text-gray-800 ">
+                <h2 className="text-xl sm:text-2xl font-semibold leading-tight text-gray-800 ">
                     Irányítópult
                 </h2>
             }
@@ -51,14 +51,18 @@ export default function Dashboard({ products }: { products: Product[] }) {
 
             <div className="py-12">
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg grid grid-cols-2 gap-4 p-2">
-                        {products && products.length > 0 ? products.map((product) => (
-                            <DashboardProductCard key={product.id} product={product} />
-                        )) : (
-                            <div className="p-4">
-                                <p className="text-center">Nics.</p>
-                            </div>
-                        )}
+                    <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg p-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {products && products.length > 0 ? (
+                                products.map((product) => (
+                                    <DashboardProductCard key={product.id} product={product} />
+                                ))
+                            ) : (
+                                <div className="col-span-full p-4">
+                                    <p className="text-center text-gray-500">Nincsenek termékek.</p>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
