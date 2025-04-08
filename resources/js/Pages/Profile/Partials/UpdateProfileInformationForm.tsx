@@ -98,7 +98,7 @@ export default function UpdateProfileInformation({
                 )}
 
                 <div className="flex items-center gap-4">
-                    <PrimarySencondButton disabled={processing} >mentés</PrimarySencondButton>
+                    <PrimaryButton disabled={processing} >mentés</PrimaryButton>
 
                     <Transition
                         show={recentlySuccessful}
