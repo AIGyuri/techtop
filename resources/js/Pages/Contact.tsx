@@ -38,7 +38,7 @@ export default function Contact() {
 
     return (
         <Guest>
-            <div className="flex py-24 flex-col items-center bg-gray-50 sm:justify-center sm:pt-0 relative">
+            <div className="flex md:py-[26px] flex-col items-center bg-gray-50 sm:justify-center sm:pt-0 relative">
 
                 {showFlash && (
                     <>
@@ -60,7 +60,7 @@ export default function Contact() {
                     </>
                 )}
 
-                <div className="mt-16 w-full max-w-lg overflow-hidden bg-white px-6 py-8 shadow-md sm:rounded-lg">
+                <div className="mt-4 md:mt-16 w-full max-w-lg overflow-hidden bg-white px-6 py-8 shadow-md sm:rounded-lg">
                     <h2 className="text-center text-3xl sm:text-4xl font-bold text-blue-500 mb-4">Kapcsolat</h2>
 
                     {/* Elérhetőségek */}

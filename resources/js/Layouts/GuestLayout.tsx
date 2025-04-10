@@ -155,7 +155,7 @@ export default function Guest({ children }: PropsWithChildren) {
                     {mobileMenuOpen && (
                         <div
                             id="ecommerce-navbar-menu-1"
-                            className="lg:hidden bg-gray-200 border-gray-200 rounded-lg py-3 px-4 mt-4"
+                            className="lg:hidden bg-blue-200 border-gray-200 rounded-lg py-3 px-4 mt-4"
                         >
                             <ul className="text-gray-900 text-sm font-medium space-y-3">
                                 <li>
