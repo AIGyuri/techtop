@@ -1,3 +1,4 @@
+import { useState } from "react";
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
@@ -5,6 +6,7 @@ import TextInput from '@/Components/TextInput';
 import { Transition } from '@headlessui/react';
 import { useForm } from '@inertiajs/react';
 import { FormEventHandler, useRef } from 'react';
+import { Eye, EyeOff } from "lucide-react";
 
 export default function UpdatePasswordForm({
     className = '',
@@ -27,6 +29,8 @@ export default function UpdatePasswordForm({
         password: '',
         password_confirmation: '',
     });
+
+    const [showPassword, setShowPassword] = useState(false);
 
     const updatePassword: FormEventHandler = (e) => {
         e.preventDefault();
@@ -89,17 +93,33 @@ export default function UpdatePasswordForm({
                 <div>
                     <InputLabel htmlFor="password" value="Új jelszó" />
 
+                    <div className="relative">
                     <TextInput
                         id="password"
                         ref={passwordInput}
                         value={data.password}
                         onChange={(e) => setData('password', e.target.value)}
-                        type="password"
+                        type={showPassword ? "text" : "password"}
                         className="mt-1 block w-full"
                         autoComplete="new-password"
                     />
+                   <button
+                                type="button"
+                                onClick={() => setShowPassword(!showPassword)}
+                                className="absolute inset-y-0 right-1 flex items-center pr-3"
+                            >
+                                {showPassword ? (
+                                    <Eye className="w-4 h-4" />
+                                ) : (
+                                    <EyeOff className="w-4 h-4" />
+                                )}
+                            </button>
+                    </div>
+
+
 
                     <InputError message={errors.password ? "A jelszó mező kitöltése kötelező." : ''} className="mt-2" />
+                    
                 </div>
 
                 <div>
@@ -108,6 +128,7 @@ export default function UpdatePasswordForm({
                         value="Jelszó megerősítése"
                     />
 
+                    <div className="relative">
                     <TextInput
                         id="password_confirmation"
                         value={data.password_confirmation}
@@ -118,6 +139,19 @@ export default function UpdatePasswordForm({
                         className="mt-1 block w-full"
                         autoComplete="new-password"
                     />
+
+                            <button
+                                type="button"
+                                onClick={() => setShowPassword(!showPassword)}
+                                className="absolute inset-y-0 right-1 flex items-center pr-3"
+                            >
+                                {showPassword ? (
+                                    <Eye className="w-4 h-4" />
+                                ) : (
+                                    <EyeOff className="w-4 h-4" />
+                                )}
+                            </button>
+                    </div>
 
                     <InputError
                         message={errors.password_confirmation}
