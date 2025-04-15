@@ -17,9 +17,9 @@ export default function Reviews({
     return (
         <Authenticated>
             <div className="mt-8 max-w-6xl mx-auto">
-                <h3 className="text-lg font-semibold text-gray-700 text-center mb-4">All Reviews</h3>
+                <h3 className="text-lg font-semibold text-gray-700 text-center mb-4">Az összes visszajelzés</h3>
                 {reviews.length === 0 ? (
-                    <p className="text-center text-gray-500">No reviews yet.</p>
+                    <p className="text-center text-gray-500">Nincs még visszajelzés</p>
                 ) : (
                     reviews.map((review, index) => (
                         <div key={index} className="mb-6 p-4 border rounded-lg shadow-sm bg-gray-50">
