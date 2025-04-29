@@ -69,7 +69,7 @@ export default function Guest({ children }: PropsWithChildren) {
                                                 className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
                                             >
                                                 <UserPlus className='w-4 h-4 mr-2' />
-                                                Register
+                                                Regisztráció
                                             </Link>
                                         </div>
                                         <div className="relative">
@@ -79,7 +79,7 @@ export default function Guest({ children }: PropsWithChildren) {
                                                 className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 text-sm font-medium leading-none text-gray-900"
                                             >
                                                 <UserRoundIcon className='w-4 h-4 mr-2' />
-                                                Login
+                                                Bejelentkezés
                                             </Link>
                                         </div>
                                     </div>
